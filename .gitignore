@@ -1,0 +1,19 @@
+# 絕對不能上傳到 GitHub 的檔案
+service_account.json
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# 系統檔
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
