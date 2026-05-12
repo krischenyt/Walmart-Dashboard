@@ -1,0 +1,14 @@
+{
+  "name": "walmart-sales-fetcher",
+  "version": "1.0.0",
+  "description": "Fetch Walmart Marketplace sales data",
+  "main": "fetch-sales.js",
+  "scripts": {
+    "fetch": "node fetch-sales.js",
+    "seed": "node seed-demo.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}

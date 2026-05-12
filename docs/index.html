@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walmart Sales Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0c0f;
+      --surface: #111318;
+      --surface2: #181c22;
+      --border: rgba(255,255,255,0.07);
+      --border2: rgba(255,255,255,0.12);
+      --text: #e8eaf0;
+      --muted: #6b7280;
+      --accent: #00d084;
+      --accent2: #0090ff;
+      --accent3: #ff6b35;
+      --warn: #fbbf24;
+      --font-head: 'Syne', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-mono);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+    .logo-text {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+    }
+    .logo-text span { color: var(--accent); }
+    .header-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+    #last-updated { color: var(--accent); }
+
+    /* ── Layout ── */
+    main { padding: 28px 32px; max-width: 1400px; margin: 0 auto; }
+
+    /* ── Range tabs ── */
+    .range-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+    .range-bar label {
+      font-size: 11px;
+      color: var(--muted);
+      margin-right: 4px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .range-btn {
+      background: none;
+      border: 1px solid var(--border2);
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .range-btn:hover { border-color: var(--accent); color: var(--text); }
+    .range-btn.active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 500; }
+
+    /* ── KPI cards ── */
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 900px) { .kpis { grid-template-columns: repeat(2,1fr); } }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .kpi::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .kpi.green::before { background: var(--accent); }
+    .kpi.blue::before  { background: var(--accent2); }
+    .kpi.orange::before{ background: var(--accent3); }
+    .kpi.yellow::before{ background: var(--warn); }
+    .kpi-label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+    .kpi-value {
+      font-family: var(--font-head);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .kpi-sub {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .kpi-delta {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-top: 4px;
+    }
+    .kpi-delta.up   { background: rgba(0,208,132,.15); color: var(--accent); }
+    .kpi-delta.down { background: rgba(255,107,53,.15); color: var(--accent3); }
+
+    /* ── Chart section ── */
+    .charts-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 900px) { .charts-row { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+    }
+    .chart-wrap {
+      position: relative;
+      height: 220px;
+    }
+
+    /* ── Bottom row ── */
+    .bottom-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 900px) { .bottom-row { grid-template-columns: 1fr; } }
+
+    /* ── Product table ── */
+    .product-table { width: 100%; border-collapse: collapse; }
+    .product-table th {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      text-align: left;
+      padding: 0 0 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .product-table th:not(:first-child) { text-align: right; }
+    .product-table td {
+      font-size: 13px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .product-table td:not(:first-child) { text-align: right; }
+    .product-table tr:last-child td { border-bottom: none; }
+    .rank {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: var(--surface2);
+      font-size: 10px;
+      text-align: center;
+      line-height: 20px;
+      color: var(--muted);
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .rank.top { background: rgba(0,208,132,.2); color: var(--accent); }
+    .rev-bar-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .rev-bar {
+      height: 4px;
+      border-radius: 2px;
+      background: var(--accent);
+      opacity: .5;
+    }
+
+    /* ── Calendar heatmap ── */
+    #heatmap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+    .hm-cell {
+      width: 14px; height: 14px;
+      border-radius: 3px;
+      background: var(--surface2);
+      cursor: pointer;
+      transition: transform .1s;
+      position: relative;
+    }
+    .hm-cell:hover { transform: scale(1.4); z-index: 10; }
+    .hm-tooltip {
+      position: fixed;
+      background: #1e2228;
+      border: 1px solid var(--border2);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      pointer-events: none;
+      z-index: 200;
+      display: none;
+      white-space: nowrap;
+    }
+
+    /* ── Loading ── */
+    #loading {
+      position: fixed; inset: 0;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 999;
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 2px solid var(--border2);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #loading p { color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <p>Loading sales data...</p>
+</div>
+
+<div id="app" style="display:none">
+  <header>
+    <div class="logo">
+      <div class="logo-dot"></div>
+      <div class="logo-text">Walmart <span>Sales</span></div>
+    </div>
+    <div class="header-meta">
+      Last updated: <span id="last-updated">—</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="range-bar">
+      <label>Range</label>
+      <button class="range-btn" data-days="7">7D</button>
+      <button class="range-btn active" data-days="30">30D</button>
+      <button class="range-btn" data-days="60">60D</button>
+      <button class="range-btn" data-days="90">90D</button>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi green">
+        <div class="kpi-label">Total Revenue</div>
+        <div class="kpi-value" id="kpi-revenue">—</div>
+        <div class="kpi-sub"><span class="kpi-delta" id="kpi-revenue-delta"></span></div>
+      </div>
+      <div class="kpi blue">
+        <div class="kpi-label">Orders</div>
+        <div class="kpi-value" id="kpi-orders">—</div>
+        <div class="kpi-sub"><span class="kpi-delta" id="kpi-orders-delta"></span></div>
+      </div>
+      <div class="kpi orange">
+        <div class="kpi-label">Units Sold</div>
+        <div class="kpi-value" id="kpi-units">—</div>
+        <div class="kpi-sub"><span class="kpi-delta" id="kpi-units-delta"></span></div>
+      </div>
+      <div class="kpi yellow">
+        <div class="kpi-label">Avg Order Value</div>
+        <div class="kpi-value" id="kpi-aov">—</div>
+        <div class="kpi-sub"><span class="kpi-delta" id="kpi-aov-delta"></span></div>
+      </div>
+    </div>
+
+    <div class="charts-row">
+      <div class="card">
+        <div class="card-title">Daily Revenue</div>
+        <div class="chart-wrap"><canvas id="chart-revenue"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Orders vs Units</div>
+        <div class="chart-wrap"><canvas id="chart-orders"></canvas></div>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="card">
+        <div class="card-title">Top Products by Revenue</div>
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Units</th>
+              <th>Revenue</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body"></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-title">Activity Heatmap (90 days)</div>
+        <div id="heatmap"></div>
+        <div class="hm-tooltip" id="hm-tooltip"></div>
+        <div style="display:flex;gap:6px;align-items:center;margin-top:12px">
+          <span style="font-size:11px;color:var(--muted)">Low</span>
+          <div style="display:flex;gap:3px">
+            <div style="width:14px;height:14px;border-radius:3px;background:#0d2418"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:#0f4d2a"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:#0f7a3e"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:#00a852"></div>
+            <div style="width:14px;height:14px;border-radius:3px;background:var(--accent)"></div>
+          </div>
+          <span style="font-size:11px;color:var(--muted)">High</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+let allData = [];
+let revenueChart = null;
+let ordersChart = null;
+
+const CHART_DEFAULTS = {
+  color: '#6b7280',
+  font: { family: "'DM Mono', monospace", size: 11 },
+};
+Chart.defaults.color = CHART_DEFAULTS.color;
+Chart.defaults.font  = CHART_DEFAULTS.font;
+
+// ── Load data ──────────────────────────────────────────────────────────────
+async function loadData() {
+  const res = await fetch('./data/sales.json?t=' + Date.now());
+  if (!res.ok) throw new Error('Cannot load sales.json');
+  return res.json();
+}
+
+// ── Slice data by range ────────────────────────────────────────────────────
+function sliceData(days) {
+  return allData.slice(-days);
+}
+
+// ── Format helpers ─────────────────────────────────────────────────────────
+const fmt$ = v => '$' + Number(v).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+const fmtN = v => Number(v).toLocaleString('en-US');
+
+function deltaEl(el, curr, prev) {
+  if (!prev) { el.textContent = ''; return; }
+  const pct = ((curr - prev) / prev * 100).toFixed(1);
+  const up = curr >= prev;
+  el.textContent = (up ? '▲' : '▼') + ' ' + Math.abs(pct) + '%';
+  el.className = 'kpi-delta ' + (up ? 'up' : 'down');
+}
+
+// ── KPI cards ──────────────────────────────────────────────────────────────
+function renderKPIs(data) {
+  const half = Math.floor(data.length / 2);
+  const curr = data.slice(half);
+  const prev = data.slice(0, half);
+
+  const sum  = arr => arr.reduce((s, d) => s + d.totalRevenue, 0);
+  const sumO = arr => arr.reduce((s, d) => s + d.orderCount,   0);
+  const sumU = arr => arr.reduce((s, d) => s + d.totalUnits,   0);
+
+  const cRev = sum(curr);  const pRev = sum(prev);
+  const cOrd = sumO(curr); const pOrd = sumO(prev);
+  const cUni = sumU(curr); const pUni = sumU(prev);
+  const cAOV = cOrd ? cRev / cOrd : 0;
+  const pAOV = pOrd ? pRev / pOrd : 0;
+
+  document.getElementById('kpi-revenue').textContent = fmt$(cRev);
+  document.getElementById('kpi-orders').textContent  = fmtN(cOrd);
+  document.getElementById('kpi-units').textContent   = fmtN(cUni);
+  document.getElementById('kpi-aov').textContent     = fmt$(cAOV);
+
+  deltaEl(document.getElementById('kpi-revenue-delta'), cRev, pRev);
+  deltaEl(document.getElementById('kpi-orders-delta'),  cOrd, pOrd);
+  deltaEl(document.getElementById('kpi-units-delta'),   cUni, pUni);
+  deltaEl(document.getElementById('kpi-aov-delta'),     cAOV, pAOV);
+}
+
+// ── Revenue chart ──────────────────────────────────────────────────────────
+function renderRevenueChart(data) {
+  const labels = data.map(d => d.date.slice(5)); // MM-DD
+  const values = data.map(d => d.totalRevenue);
+
+  if (revenueChart) revenueChart.destroy();
+  revenueChart = new Chart(document.getElementById('chart-revenue'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        borderColor: '#00d084',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        fill: true,
+        backgroundColor: ctx => {
+          const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 220);
+          g.addColorStop(0, 'rgba(0,208,132,.25)');
+          g.addColorStop(1, 'rgba(0,208,132,0)');
+          return g;
+        },
+        tension: 0.35,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: {
+          callbacks: { label: ctx => ' $' + ctx.raw.toLocaleString('en-US', {minimumFractionDigits:2}) }
+        }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,.04)' }, ticks: { maxTicksLimit: 8 } },
+        y: { grid: { color: 'rgba(255,255,255,.04)' },
+          ticks: { callback: v => '$' + (v >= 1000 ? (v/1000).toFixed(0)+'k' : v) }
+        },
+      },
+    },
+  });
+}
+
+// ── Orders chart ───────────────────────────────────────────────────────────
+function renderOrdersChart(data) {
+  const labels = data.map(d => d.date.slice(5));
+
+  if (ordersChart) ordersChart.destroy();
+  ordersChart = new Chart(document.getElementById('chart-orders'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Orders', data: data.map(d => d.orderCount),
+          backgroundColor: 'rgba(0,144,255,.5)', borderColor: '#0090ff', borderWidth: 1, borderRadius: 2 },
+        { label: 'Units',  data: data.map(d => d.totalUnits),
+          backgroundColor: 'rgba(255,107,53,.4)', borderColor: '#ff6b35', borderWidth: 1, borderRadius: 2 },
+      ],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { labels: { boxWidth: 10, padding: 12, font: { size: 11 } } } },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxTicksLimit: 6 } },
+        y: { grid: { color: 'rgba(255,255,255,.04)' } },
+      },
+    },
+  });
+}
+
+// ── Product table ──────────────────────────────────────────────────────────
+function renderProducts(data) {
+  const productMap = {};
+  for (const day of data) {
+    for (const p of (day.topProducts || [])) {
+      if (!productMap[p.sku]) productMap[p.sku] = { ...p, units: 0, revenue: 0 };
+      productMap[p.sku].units   += p.units;
+      productMap[p.sku].revenue += p.revenue;
+    }
+  }
+  const products = Object.values(productMap)
+    .sort((a, b) => b.revenue - a.revenue)
+    .slice(0, 8);
+
+  const maxRev = products[0]?.revenue || 1;
+  const tbody = document.getElementById('product-table-body');
+  tbody.innerHTML = products.map((p, i) => `
+    <tr>
+      <td>
+        <span class="rank ${i < 3 ? 'top' : ''}">${i + 1}</span>
+        <span style="font-size:12px">${p.name}</span>
+      </td>
+      <td>${fmtN(p.units)}</td>
+      <td>
+        <div class="rev-bar-wrap">
+          <div class="rev-bar" style="width:${Math.round(p.revenue / maxRev * 60)}px"></div>
+          ${fmt$(p.revenue)}
+        </div>
+      </td>
+    </tr>
+  `).join('');
+}
+
+// ── Heatmap ────────────────────────────────────────────────────────────────
+function renderHeatmap(data) {
+  const maxRev = Math.max(...data.map(d => d.totalRevenue));
+  const colors = ['#0d2418','#0f4d2a','#0f7a3e','#00a852','#00d084'];
+  const tooltip = document.getElementById('hm-tooltip');
+  const wrap = document.getElementById('heatmap');
+
+  wrap.innerHTML = data.map(d => {
+    const ratio = d.totalRevenue / maxRev;
+    const ci = Math.min(4, Math.floor(ratio * 5));
+    return `<div class="hm-cell" style="background:${colors[ci]}"
+      data-date="${d.date}" data-rev="${d.totalRevenue}" data-orders="${d.orderCount}"></div>`;
+  }).join('');
+
+  wrap.addEventListener('mousemove', e => {
+    const cell = e.target.closest('.hm-cell');
+    if (!cell) { tooltip.style.display = 'none'; return; }
+    tooltip.style.display = 'block';
+    tooltip.style.left = (e.clientX + 12) + 'px';
+    tooltip.style.top  = (e.clientY - 40) + 'px';
+    tooltip.innerHTML = `<b>${cell.dataset.date}</b><br>Revenue: ${fmt$(cell.dataset.rev)}<br>Orders: ${cell.dataset.orders}`;
+  });
+  wrap.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+}
+
+// ── Main render ────────────────────────────────────────────────────────────
+function render(days) {
+  const data = sliceData(days);
+  renderKPIs(data);
+  renderRevenueChart(data);
+  renderOrdersChart(data);
+  renderProducts(data);
+  renderHeatmap(allData); // always show full 90d heatmap
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────
+(async () => {
+  try {
+    const db = await loadData();
+    allData = db.daily || [];
+
+    if (db.lastUpdated) {
+      const d = new Date(db.lastUpdated);
+      document.getElementById('last-updated').textContent =
+        d.toLocaleDateString('zh-TW') + ' ' + d.toLocaleTimeString('zh-TW', { hour:'2-digit', minute:'2-digit' });
+    }
+
+    // Range buttons
+    document.querySelectorAll('.range-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        render(Number(btn.dataset.days));
+      });
+    });
+
+    render(30); // default 30D
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+  } catch (err) {
+    document.getElementById('loading').innerHTML =
+      `<p style="color:#ff6b35">Failed to load data:<br>${err.message}</p>
+       <p style="color:#6b7280;font-size:12px;margin-top:8px">Run <code>node scripts/seed-demo.js</code> first</p>`;
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,5135 @@
+{
+  "lastUpdated": "2026-05-12T23:08:29.244Z",
+  "daily": [
+    {
+      "date": "2026-02-12",
+      "orderCount": 54,
+      "totalRevenue": 6033,
+      "totalUnits": 110,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 17,
+          "revenue": 1292
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 19,
+          "revenue": 1254
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 11,
+          "revenue": 1166
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 18,
+          "revenue": 792
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 680
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 11,
+          "revenue": 594
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 165
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 3,
+          "revenue": 90
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-13",
+      "orderCount": 74,
+      "totalRevenue": 5979,
+      "totalUnits": 77,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 19,
+          "revenue": 2071
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 10,
+          "revenue": 1020
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 7,
+          "revenue": 826
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 13,
+          "revenue": 715
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 11,
+          "revenue": 528
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 3,
+          "revenue": 303
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 296
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 220
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-14",
+      "orderCount": 62,
+      "totalRevenue": 10622,
+      "totalUnits": 133,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 22,
+          "revenue": 2552
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 27,
+          "revenue": 1971
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 14,
+          "revenue": 1624
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 11,
+          "revenue": 1298
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 904
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 21,
+          "revenue": 903
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 800
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 10,
+          "revenue": 570
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-15",
+      "orderCount": 62,
+      "totalRevenue": 10854,
+      "totalUnits": 153,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 22,
+          "revenue": 2508
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 21,
+          "revenue": 2415
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 28,
+          "revenue": 1512
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 22,
+          "revenue": 1386
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 1157
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 22,
+          "revenue": 1012
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 14,
+          "revenue": 490
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 11,
+          "revenue": 374
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-16",
+      "orderCount": 75,
+      "totalRevenue": 5547,
+      "totalUnits": 104,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 19,
+          "revenue": 1406
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 13,
+          "revenue": 1131
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 960
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 565
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 10,
+          "revenue": 530
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 8,
+          "revenue": 432
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 15,
+          "revenue": 285
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 14,
+          "revenue": 238
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-17",
+      "orderCount": 79,
+      "totalRevenue": 5044,
+      "totalUnits": 89,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 20,
+          "revenue": 1900
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 8,
+          "revenue": 920
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 11,
+          "revenue": 869
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 460
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 7,
+          "revenue": 336
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 14,
+          "revenue": 238
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 2,
+          "revenue": 216
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 7,
+          "revenue": 105
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-18",
+      "orderCount": 70,
+      "totalRevenue": 2926,
+      "totalUnits": 71,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 14,
+          "revenue": 868
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 18,
+          "revenue": 576
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 11,
+          "revenue": 429
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 399
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 6,
+          "revenue": 270
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 7,
+          "revenue": 210
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 3,
+          "revenue": 99
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 75
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-19",
+      "orderCount": 71,
+      "totalRevenue": 3700,
+      "totalUnits": 69,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 13,
+          "revenue": 949
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 16,
+          "revenue": 784
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 8,
+          "revenue": 704
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 598
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 10,
+          "revenue": 300
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 2,
+          "revenue": 224
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 75
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 2,
+          "revenue": 66
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-20",
+      "orderCount": 48,
+      "totalRevenue": 5246,
+      "totalUnits": 82,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 17,
+          "revenue": 1632
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 17,
+          "revenue": 986
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 10,
+          "revenue": 730
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 684
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 9,
+          "revenue": 459
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 6,
+          "revenue": 372
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 2,
+          "revenue": 224
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 3,
+          "revenue": 159
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-21",
+      "orderCount": 78,
+      "totalRevenue": 7244,
+      "totalUnits": 118,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 27,
+          "revenue": 2133
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 22,
+          "revenue": 1298
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 10,
+          "revenue": 1130
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 1001
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 6,
+          "revenue": 594
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 418
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 14,
+          "revenue": 364
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 17,
+          "revenue": 306
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-22",
+      "orderCount": 90,
+      "totalRevenue": 8068,
+      "totalUnits": 129,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 28,
+          "revenue": 2184
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 17,
+          "revenue": 1292
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 15,
+          "revenue": 1170
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 22,
+          "revenue": 1144
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 972
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 18,
+          "revenue": 918
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 8,
+          "revenue": 280
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 3,
+          "revenue": 108
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-23",
+      "orderCount": 73,
+      "totalRevenue": 4987,
+      "totalUnits": 64,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 15,
+          "revenue": 1530
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 14,
+          "revenue": 1358
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 702
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 600
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 9,
+          "revenue": 261
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 4,
+          "revenue": 252
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 6,
+          "revenue": 174
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 2,
+          "revenue": 110
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-24",
+      "orderCount": 55,
+      "totalRevenue": 6219,
+      "totalUnits": 80,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 1780
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 14,
+          "revenue": 1190
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 1080
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 14,
+          "revenue": 1008
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 5,
+          "revenue": 455
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 378
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 288
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 2,
+          "revenue": 40
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-25",
+      "orderCount": 42,
+      "totalRevenue": 5910,
+      "totalUnits": 80,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 16,
+          "revenue": 1472
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 15,
+          "revenue": 1380
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 12,
+          "revenue": 1344
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 14,
+          "revenue": 966
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 11,
+          "revenue": 374
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 2,
+          "revenue": 176
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 152
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 2,
+          "revenue": 46
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-26",
+      "orderCount": 48,
+      "totalRevenue": 3897,
+      "totalUnits": 77,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 13,
+          "revenue": 936
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 20,
+          "revenue": 720
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 9,
+          "revenue": 666
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 6,
+          "revenue": 480
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 15,
+          "revenue": 435
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 288
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 2,
+          "revenue": 188
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 184
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-27",
+      "orderCount": 84,
+      "totalRevenue": 5709,
+      "totalUnits": 91,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 19,
+          "revenue": 1976
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 15,
+          "revenue": 1215
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 770
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 18,
+          "revenue": 432
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 8,
+          "revenue": 432
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 6,
+          "revenue": 354
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 12,
+          "revenue": 336
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 2,
+          "revenue": 194
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-02-28",
+      "orderCount": 74,
+      "totalRevenue": 10151,
+      "totalUnits": 154,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 22,
+          "revenue": 2134
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 1853
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 25,
+          "revenue": 1650
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 24,
+          "revenue": 1272
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 15,
+          "revenue": 1185
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 25,
+          "revenue": 825
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 660
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 11,
+          "revenue": 572
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-01",
+      "orderCount": 99,
+      "totalRevenue": 5276,
+      "totalUnits": 102,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 1298
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 21,
+          "revenue": 1113
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 880
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 15,
+          "revenue": 795
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 511
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 11,
+          "revenue": 297
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 13,
+          "revenue": 234
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 148
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-02",
+      "orderCount": 60,
+      "totalRevenue": 3170,
+      "totalUnits": 45,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 7,
+          "revenue": 721
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 5,
+          "revenue": 585
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 13,
+          "revenue": 520
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 5,
+          "revenue": 420
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 6,
+          "revenue": 378
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 3,
+          "revenue": 216
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 192
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 2,
+          "revenue": 138
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-03",
+      "orderCount": 46,
+      "totalRevenue": 5240,
+      "totalUnits": 82,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 18,
+          "revenue": 1944
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 12,
+          "revenue": 1248
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 585
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 14,
+          "revenue": 476
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 8,
+          "revenue": 408
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 9,
+          "revenue": 333
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 6,
+          "revenue": 132
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 2,
+          "revenue": 114
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-04",
+      "orderCount": 71,
+      "totalRevenue": 5695,
+      "totalUnits": 107,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 19,
+          "revenue": 1216
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 10,
+          "revenue": 960
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 18,
+          "revenue": 882
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 20,
+          "revenue": 860
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 20,
+          "revenue": 800
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 6,
+          "revenue": 492
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 374
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 3,
+          "revenue": 111
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-05",
+      "orderCount": 51,
+      "totalRevenue": 6693,
+      "totalUnits": 92,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 12,
+          "revenue": 1404
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 11,
+          "revenue": 1254
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 1170
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 18,
+          "revenue": 864
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 13,
+          "revenue": 845
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 640
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 308
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 208
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-06",
+      "orderCount": 62,
+      "totalRevenue": 3656,
+      "totalUnits": 76,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 660
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 605
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 12,
+          "revenue": 552
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 12,
+          "revenue": 528
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 4,
+          "revenue": 412
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 11,
+          "revenue": 385
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 4,
+          "revenue": 336
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 2,
+          "revenue": 178
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-07",
+      "orderCount": 95,
+      "totalRevenue": 9549,
+      "totalUnits": 113,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 21,
+          "revenue": 2205
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 18,
+          "revenue": 1980
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 17,
+          "revenue": 1785
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 15,
+          "revenue": 1575
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 22,
+          "revenue": 1166
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 3,
+          "revenue": 294
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 11,
+          "revenue": 286
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 6,
+          "revenue": 258
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-08",
+      "orderCount": 98,
+      "totalRevenue": 5765,
+      "totalUnits": 96,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 25,
+          "revenue": 1600
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 10,
+          "revenue": 1020
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 10,
+          "revenue": 950
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 14,
+          "revenue": 812
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 22,
+          "revenue": 594
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 6,
+          "revenue": 306
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 3,
+          "revenue": 255
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 6,
+          "revenue": 228
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-09",
+      "orderCount": 64,
+      "totalRevenue": 6297,
+      "totalUnits": 105,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 18,
+          "revenue": 1746
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 11,
+          "revenue": 891
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 17,
+          "revenue": 867
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 20,
+          "revenue": 780
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 8,
+          "revenue": 760
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 20,
+          "revenue": 720
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 372
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 7,
+          "revenue": 161
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-10",
+      "orderCount": 58,
+      "totalRevenue": 6721,
+      "totalUnits": 103,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 20,
+          "revenue": 1880
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 1260
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 14,
+          "revenue": 1022
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 720
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 720
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 7,
+          "revenue": 693
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 9,
+          "revenue": 306
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 3,
+          "revenue": 120
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-11",
+      "orderCount": 85,
+      "totalRevenue": 5087,
+      "totalUnits": 91,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 19,
+          "revenue": 1463
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 13,
+          "revenue": 1313
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 14,
+          "revenue": 798
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 14,
+          "revenue": 644
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 9,
+          "revenue": 279
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 10,
+          "revenue": 210
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 208
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 4,
+          "revenue": 172
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-12",
+      "orderCount": 45,
+      "totalRevenue": 6157,
+      "totalUnits": 91,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 14,
+          "revenue": 1582
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 1480
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 15,
+          "revenue": 900
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 12,
+          "revenue": 780
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 5,
+          "revenue": 600
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 5,
+          "revenue": 285
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 5,
+          "revenue": 275
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 15,
+          "revenue": 255
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-13",
+      "orderCount": 77,
+      "totalRevenue": 6117,
+      "totalUnits": 76,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 16,
+          "revenue": 1584
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 14,
+          "revenue": 1442
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 9,
+          "revenue": 918
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 805
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 664
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 16,
+          "revenue": 480
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 2,
+          "revenue": 120
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 4,
+          "revenue": 104
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-14",
+      "orderCount": 102,
+      "totalRevenue": 8002,
+      "totalUnits": 93,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 24,
+          "revenue": 2760
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 24,
+          "revenue": 2064
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 920
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 14,
+          "revenue": 910
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 10,
+          "revenue": 750
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 3,
+          "revenue": 246
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 3,
+          "revenue": 219
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 133
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-15",
+      "orderCount": 105,
+      "totalRevenue": 6541,
+      "totalUnits": 108,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 14,
+          "revenue": 1680
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 21,
+          "revenue": 1344
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 21,
+          "revenue": 1155
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 752
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 15,
+          "revenue": 690
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 450
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 8,
+          "revenue": 392
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 3,
+          "revenue": 78
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-16",
+      "orderCount": 58,
+      "totalRevenue": 4612,
+      "totalUnits": 79,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 1908
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 17,
+          "revenue": 799
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 434
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 10,
+          "revenue": 410
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 351
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 4,
+          "revenue": 300
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 3,
+          "revenue": 270
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 7,
+          "revenue": 140
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-17",
+      "orderCount": 74,
+      "totalRevenue": 8133,
+      "totalUnits": 117,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 20,
+          "revenue": 1900
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 13,
+          "revenue": 1443
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 12,
+          "revenue": 1044
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 16,
+          "revenue": 912
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 18,
+          "revenue": 846
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 784
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 17,
+          "revenue": 714
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 14,
+          "revenue": 490
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.243Z"
+    },
+    {
+      "date": "2026-03-18",
+      "orderCount": 82,
+      "totalRevenue": 4784,
+      "totalUnits": 59,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 19,
+          "revenue": 2109
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 648
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 5,
+          "revenue": 515
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 8,
+          "revenue": 464
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 10,
+          "revenue": 400
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 3,
+          "revenue": 339
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 3,
+          "revenue": 228
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 3,
+          "revenue": 81
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-19",
+      "orderCount": 88,
+      "totalRevenue": 6326,
+      "totalUnits": 108,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 19,
+          "revenue": 1482
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 11,
+          "revenue": 1265
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 15,
+          "revenue": 840
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 13,
+          "revenue": 819
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 19,
+          "revenue": 760
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 666
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 344
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 5,
+          "revenue": 150
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-20",
+      "orderCount": 66,
+      "totalRevenue": 3465,
+      "totalUnits": 61,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 7,
+          "revenue": 784
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 6,
+          "revenue": 612
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 10,
+          "revenue": 570
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 16,
+          "revenue": 448
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 5,
+          "revenue": 400
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 9,
+          "revenue": 297
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 5,
+          "revenue": 270
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 3,
+          "revenue": 84
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-21",
+      "orderCount": 68,
+      "totalRevenue": 4207,
+      "totalUnits": 106,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 14,
+          "revenue": 1106
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 10,
+          "revenue": 710
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 14,
+          "revenue": 672
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 24,
+          "revenue": 504
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 11,
+          "revenue": 385
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 374
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 288
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 4,
+          "revenue": 168
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-22",
+      "orderCount": 71,
+      "totalRevenue": 12952,
+      "totalUnits": 158,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 27,
+          "revenue": 3078
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 28,
+          "revenue": 2772
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 1683
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 1314
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 1313
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 21,
+          "revenue": 1260
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 860
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 14,
+          "revenue": 672
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-23",
+      "orderCount": 82,
+      "totalRevenue": 6061,
+      "totalUnits": 87,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 13,
+          "revenue": 1534
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 19,
+          "revenue": 1520
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 13,
+          "revenue": 936
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 19,
+          "revenue": 855
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 6,
+          "revenue": 654
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 2,
+          "revenue": 232
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 13,
+          "revenue": 208
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 2,
+          "revenue": 122
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-24",
+      "orderCount": 70,
+      "totalRevenue": 8347,
+      "totalUnits": 118,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 15,
+          "revenue": 1800
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 1296
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 1224
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 1155
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 11,
+          "revenue": 869
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 10,
+          "revenue": 690
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 18,
+          "revenue": 684
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 17,
+          "revenue": 629
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-25",
+      "orderCount": 70,
+      "totalRevenue": 5623,
+      "totalUnits": 84,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 1938
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 15,
+          "revenue": 1365
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 9,
+          "revenue": 657
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 396
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 5,
+          "revenue": 385
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 384
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 9,
+          "revenue": 342
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 3,
+          "revenue": 156
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-26",
+      "orderCount": 80,
+      "totalRevenue": 6417,
+      "totalUnits": 100,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 16,
+          "revenue": 1632
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 17,
+          "revenue": 1343
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 1008
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 962
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 8,
+          "revenue": 520
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 8,
+          "revenue": 424
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 7,
+          "revenue": 294
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 234
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-27",
+      "orderCount": 53,
+      "totalRevenue": 5771,
+      "totalUnits": 86,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 16,
+          "revenue": 1456
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 19,
+          "revenue": 1311
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 17,
+          "revenue": 1020
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 816
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 4,
+          "revenue": 388
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 11,
+          "revenue": 341
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 4,
+          "revenue": 292
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 7,
+          "revenue": 147
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-28",
+      "orderCount": 85,
+      "totalRevenue": 10972,
+      "totalUnits": 140,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 2380
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 24,
+          "revenue": 2352
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 25,
+          "revenue": 2200
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 24,
+          "revenue": 1920
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 17,
+          "revenue": 1037
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 679
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 272
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 6,
+          "revenue": 132
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-29",
+      "orderCount": 68,
+      "totalRevenue": 7967,
+      "totalUnits": 134,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 22,
+          "revenue": 2222
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 18,
+          "revenue": 1944
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 22,
+          "revenue": 1122
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 18,
+          "revenue": 900
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 900
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 522
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 15,
+          "revenue": 240
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 3,
+          "revenue": 117
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-30",
+      "orderCount": 77,
+      "totalRevenue": 5753,
+      "totalUnits": 80,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 14,
+          "revenue": 1456
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 14,
+          "revenue": 1190
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 20,
+          "revenue": 1020
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 11,
+          "revenue": 814
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 649
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 6,
+          "revenue": 270
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 2,
+          "revenue": 216
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 2,
+          "revenue": 138
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-03-31",
+      "orderCount": 74,
+      "totalRevenue": 6649,
+      "totalUnits": 92,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 15,
+          "revenue": 1710
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 19,
+          "revenue": 1539
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 1241
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 12,
+          "revenue": 828
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 9,
+          "revenue": 432
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 13,
+          "revenue": 325
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 292
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 3,
+          "revenue": 282
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-01",
+      "orderCount": 50,
+      "totalRevenue": 8015,
+      "totalUnits": 103,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 15,
+          "revenue": 1800
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 17,
+          "revenue": 1717
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 14,
+          "revenue": 1316
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 14,
+          "revenue": 1148
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 17,
+          "revenue": 986
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 14,
+          "revenue": 644
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 312
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 92
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-02",
+      "orderCount": 72,
+      "totalRevenue": 6417,
+      "totalUnits": 97,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 20,
+          "revenue": 2060
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 13,
+          "revenue": 1131
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 8,
+          "revenue": 904
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 738
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 540
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 6,
+          "revenue": 468
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 12,
+          "revenue": 432
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 2,
+          "revenue": 144
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-03",
+      "orderCount": 89,
+      "totalRevenue": 7710,
+      "totalUnits": 95,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 2180
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 1420
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 1339
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 17,
+          "revenue": 1071
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 825
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 5,
+          "revenue": 565
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 5,
+          "revenue": 170
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 4,
+          "revenue": 140
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-04",
+      "orderCount": 128,
+      "totalRevenue": 6756,
+      "totalUnits": 92,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 21,
+          "revenue": 2415
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 24,
+          "revenue": 984
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 819
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 11,
+          "revenue": 803
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 11,
+          "revenue": 583
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 4,
+          "revenue": 408
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 384
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 8,
+          "revenue": 360
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-05",
+      "orderCount": 118,
+      "totalRevenue": 8630,
+      "totalUnits": 128,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 27,
+          "revenue": 2916
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 24,
+          "revenue": 2088
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 1062
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 10,
+          "revenue": 850
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 24,
+          "revenue": 816
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 3,
+          "revenue": 348
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 8,
+          "revenue": 312
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 14,
+          "revenue": 238
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-06",
+      "orderCount": 75,
+      "totalRevenue": 4563,
+      "totalUnits": 85,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 20,
+          "revenue": 1400
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 1062
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 14,
+          "revenue": 1050
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 4,
+          "revenue": 336
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 13,
+          "revenue": 286
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 9,
+          "revenue": 189
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 156
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 3,
+          "revenue": 84
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-07",
+      "orderCount": 67,
+      "totalRevenue": 6461,
+      "totalUnits": 87,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 20,
+          "revenue": 1940
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 17,
+          "revenue": 1734
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 13,
+          "revenue": 1300
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 15,
+          "revenue": 615
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 11,
+          "revenue": 418
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 184
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 3,
+          "revenue": 138
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 132
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-08",
+      "orderCount": 47,
+      "totalRevenue": 4657,
+      "totalUnits": 72,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 1908
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 18,
+          "revenue": 846
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 7,
+          "revenue": 651
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 10,
+          "revenue": 500
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 2,
+          "revenue": 232
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 216
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 168
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 2,
+          "revenue": 136
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-09",
+      "orderCount": 94,
+      "totalRevenue": 5102,
+      "totalUnits": 71,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 1196
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 11,
+          "revenue": 946
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 790
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 15,
+          "revenue": 780
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 5,
+          "revenue": 520
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 4,
+          "revenue": 428
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 232
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 5,
+          "revenue": 210
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-10",
+      "orderCount": 76,
+      "totalRevenue": 4615,
+      "totalUnits": 92,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 1458
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 1290
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 20,
+          "revenue": 460
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 456
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 340
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 4,
+          "revenue": 280
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 5,
+          "revenue": 215
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 2,
+          "revenue": 116
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-11",
+      "orderCount": 70,
+      "totalRevenue": 8502,
+      "totalUnits": 111,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 22,
+          "revenue": 2420
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 21,
+          "revenue": 1722
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 20,
+          "revenue": 1420
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 11,
+          "revenue": 957
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 22,
+          "revenue": 924
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 7,
+          "revenue": 483
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 380
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 4,
+          "revenue": 196
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-12",
+      "orderCount": 75,
+      "totalRevenue": 6615,
+      "totalUnits": 93,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 1500
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 20,
+          "revenue": 1400
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 744
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 8,
+          "revenue": 704
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 17,
+          "revenue": 697
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 7,
+          "revenue": 693
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 7,
+          "revenue": 553
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 6,
+          "revenue": 324
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-13",
+      "orderCount": 56,
+      "totalRevenue": 5902,
+      "totalUnits": 86,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 19,
+          "revenue": 1520
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 1309
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 792
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 10,
+          "revenue": 610
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 525
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 20,
+          "revenue": 460
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 5,
+          "revenue": 440
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 246
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-14",
+      "orderCount": 60,
+      "totalRevenue": 4705,
+      "totalUnits": 74,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 18,
+          "revenue": 1674
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 11,
+          "revenue": 902
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 10,
+          "revenue": 730
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 18,
+          "revenue": 558
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 5,
+          "revenue": 255
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 252
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 5,
+          "revenue": 190
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 3,
+          "revenue": 144
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-15",
+      "orderCount": 90,
+      "totalRevenue": 7258,
+      "totalUnits": 88,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 2020
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 15,
+          "revenue": 1710
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 20,
+          "revenue": 1200
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 10,
+          "revenue": 850
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 585
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 385
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 4,
+          "revenue": 312
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 7,
+          "revenue": 196
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-16",
+      "orderCount": 63,
+      "totalRevenue": 5118,
+      "totalUnits": 80,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 19,
+          "revenue": 1577
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 708
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 7,
+          "revenue": 707
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 6,
+          "revenue": 558
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 16,
+          "revenue": 512
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 504
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 16,
+          "revenue": 368
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 2,
+          "revenue": 184
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-17",
+      "orderCount": 57,
+      "totalRevenue": 4898,
+      "totalUnits": 93,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 17,
+          "revenue": 1513
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 900
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 784
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 6,
+          "revenue": 534
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 13,
+          "revenue": 442
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 14,
+          "revenue": 252
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 7,
+          "revenue": 252
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 13,
+          "revenue": 221
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-18",
+      "orderCount": 129,
+      "totalRevenue": 14445,
+      "totalUnits": 146,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 28,
+          "revenue": 3360
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 24,
+          "revenue": 2568
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 21,
+          "revenue": 1932
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 1860
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 21,
+          "revenue": 1659
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 13,
+          "revenue": 1534
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 13,
+          "revenue": 962
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 570
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-19",
+      "orderCount": 92,
+      "totalRevenue": 5976,
+      "totalUnits": 129,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 28,
+          "revenue": 2716
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 1130
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 22,
+          "revenue": 726
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 25,
+          "revenue": 425
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 15,
+          "revenue": 420
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 21,
+          "revenue": 315
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 4,
+          "revenue": 124
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 4,
+          "revenue": 120
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-20",
+      "orderCount": 89,
+      "totalRevenue": 6329,
+      "totalUnits": 92,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 18,
+          "revenue": 1548
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 16,
+          "revenue": 1408
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 17,
+          "revenue": 901
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 13,
+          "revenue": 897
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 5,
+          "revenue": 595
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 510
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 4,
+          "revenue": 380
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 2,
+          "revenue": 90
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-21",
+      "orderCount": 58,
+      "totalRevenue": 5532,
+      "totalUnits": 76,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 20,
+          "revenue": 1080
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 9,
+          "revenue": 1071
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 14,
+          "revenue": 910
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 793
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 6,
+          "revenue": 618
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 6,
+          "revenue": 450
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 420
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 2,
+          "revenue": 190
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-22",
+      "orderCount": 68,
+      "totalRevenue": 5439,
+      "totalUnits": 92,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 19,
+          "revenue": 1330
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 14,
+          "revenue": 1330
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 18,
+          "revenue": 1296
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 19,
+          "revenue": 570
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 434
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 6,
+          "revenue": 306
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 4,
+          "revenue": 88
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 5,
+          "revenue": 85
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-23",
+      "orderCount": 78,
+      "totalRevenue": 6103,
+      "totalUnits": 83,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 16,
+          "revenue": 1616
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 11,
+          "revenue": 1144
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 18,
+          "revenue": 1062
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 11,
+          "revenue": 858
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 9,
+          "revenue": 513
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 440
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 320
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 5,
+          "revenue": 150
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-24",
+      "orderCount": 64,
+      "totalRevenue": 7562,
+      "totalUnits": 89,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 1666
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 1508
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 1350
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 12,
+          "revenue": 1200
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 11,
+          "revenue": 814
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 9,
+          "revenue": 684
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 5,
+          "revenue": 220
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 120
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-25",
+      "orderCount": 90,
+      "totalRevenue": 10372,
+      "totalUnits": 145,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 20,
+          "revenue": 1980
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 25,
+          "revenue": 1850
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 17,
+          "revenue": 1717
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 20,
+          "revenue": 1540
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 20,
+          "revenue": 1280
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 13,
+          "revenue": 1235
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 20,
+          "revenue": 540
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 10,
+          "revenue": 230
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-26",
+      "orderCount": 80,
+      "totalRevenue": 5900,
+      "totalUnits": 85,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 27,
+          "revenue": 1755
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 1001
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 18,
+          "revenue": 864
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 8,
+          "revenue": 768
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 6,
+          "revenue": 588
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 4,
+          "revenue": 420
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 6,
+          "revenue": 354
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 3,
+          "revenue": 150
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-27",
+      "orderCount": 50,
+      "totalRevenue": 6128,
+      "totalUnits": 99,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 2088
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 18,
+          "revenue": 1386
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 15,
+          "revenue": 825
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 19,
+          "revenue": 684
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 12,
+          "revenue": 480
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 7,
+          "revenue": 287
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 8,
+          "revenue": 240
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 2,
+          "revenue": 138
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-28",
+      "orderCount": 66,
+      "totalRevenue": 5792,
+      "totalUnits": 83,
+      "topProducts": [
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 19,
+          "revenue": 1862
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 13,
+          "revenue": 1404
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 17,
+          "revenue": 612
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 19,
+          "revenue": 608
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 4,
+          "revenue": 396
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 4,
+          "revenue": 396
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 4,
+          "revenue": 292
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 3,
+          "revenue": 222
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-29",
+      "orderCount": 86,
+      "totalRevenue": 9231,
+      "totalUnits": 107,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 20,
+          "revenue": 2360
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 14,
+          "revenue": 1652
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 15,
+          "revenue": 1395
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 11,
+          "revenue": 1089
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 9,
+          "revenue": 963
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 8,
+          "revenue": 624
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 11,
+          "revenue": 616
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 19,
+          "revenue": 532
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-04-30",
+      "orderCount": 53,
+      "totalRevenue": 6254,
+      "totalUnits": 81,
+      "topProducts": [
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 17,
+          "revenue": 1700
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 12,
+          "revenue": 1140
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 11,
+          "revenue": 968
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 6,
+          "revenue": 690
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 13,
+          "revenue": 637
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 14,
+          "revenue": 532
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 3,
+          "revenue": 327
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 260
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-01",
+      "orderCount": 60,
+      "totalRevenue": 7857,
+      "totalUnits": 106,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 20,
+          "revenue": 2240
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 13,
+          "revenue": 1391
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 10,
+          "revenue": 1100
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 18,
+          "revenue": 1098
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 15,
+          "revenue": 945
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 9,
+          "revenue": 702
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 285
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 6,
+          "revenue": 96
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-02",
+      "orderCount": 129,
+      "totalRevenue": 8487,
+      "totalUnits": 120,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 25,
+          "revenue": 2975
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 14,
+          "revenue": 1414
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 20,
+          "revenue": 1080
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 13,
+          "revenue": 975
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 14,
+          "revenue": 812
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 7,
+          "revenue": 742
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 24,
+          "revenue": 384
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 3,
+          "revenue": 105
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-03",
+      "orderCount": 71,
+      "totalRevenue": 7673,
+      "totalUnits": 127,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 28,
+          "revenue": 2324
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 1600
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 24,
+          "revenue": 1248
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 14,
+          "revenue": 910
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 17,
+          "revenue": 646
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 11,
+          "revenue": 385
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 290
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 3,
+          "revenue": 270
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-04",
+      "orderCount": 98,
+      "totalRevenue": 5540,
+      "totalUnits": 84,
+      "topProducts": [
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 15,
+          "revenue": 1680
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 19,
+          "revenue": 1121
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 856
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 12,
+          "revenue": 636
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 483
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 450
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 6,
+          "revenue": 252
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 2,
+          "revenue": 62
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-05",
+      "orderCount": 98,
+      "totalRevenue": 7325,
+      "totalUnits": 98,
+      "topProducts": [
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 20,
+          "revenue": 2180
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 15,
+          "revenue": 1605
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 17,
+          "revenue": 1105
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 14,
+          "revenue": 1092
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 13,
+          "revenue": 468
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 12,
+          "revenue": 420
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 4,
+          "revenue": 404
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 3,
+          "revenue": 51
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-06",
+      "orderCount": 55,
+      "totalRevenue": 6346,
+      "totalUnits": 81,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 19,
+          "revenue": 2261
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 11,
+          "revenue": 1078
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 20,
+          "revenue": 900
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 8,
+          "revenue": 696
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 544
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 8,
+          "revenue": 432
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 5,
+          "revenue": 385
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 2,
+          "revenue": 50
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-07",
+      "orderCount": 63,
+      "totalRevenue": 6234,
+      "totalUnits": 73,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 14,
+          "revenue": 1680
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 14,
+          "revenue": 1610
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 12,
+          "revenue": 1380
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 9,
+          "revenue": 657
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 7,
+          "revenue": 378
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 3,
+          "revenue": 291
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 8,
+          "revenue": 136
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 6,
+          "revenue": 102
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-08",
+      "orderCount": 92,
+      "totalRevenue": 4198,
+      "totalUnits": 81,
+      "topProducts": [
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 19,
+          "revenue": 1501
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 15,
+          "revenue": 765
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 18,
+          "revenue": 612
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 12,
+          "revenue": 504
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 6,
+          "revenue": 294
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 3,
+          "revenue": 222
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 5,
+          "revenue": 195
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 3,
+          "revenue": 105
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-09",
+      "orderCount": 137,
+      "totalRevenue": 9064,
+      "totalUnits": 135,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 27,
+          "revenue": 2052
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 28,
+          "revenue": 1988
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 28,
+          "revenue": 1624
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 17,
+          "revenue": 1496
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 14,
+          "revenue": 658
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 10,
+          "revenue": 630
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 8,
+          "revenue": 544
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 3,
+          "revenue": 72
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-10",
+      "orderCount": 105,
+      "totalRevenue": 7917,
+      "totalUnits": 114,
+      "topProducts": [
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 15,
+          "revenue": 1710
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 17,
+          "revenue": 1479
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 17,
+          "revenue": 1054
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 11,
+          "revenue": 946
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 8,
+          "revenue": 840
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 18,
+          "revenue": 810
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 21,
+          "revenue": 798
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 7,
+          "revenue": 280
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-11",
+      "orderCount": 83,
+      "totalRevenue": 4969,
+      "totalUnits": 88,
+      "topProducts": [
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 16,
+          "revenue": 1216
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 9,
+          "revenue": 747
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 10,
+          "revenue": 680
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 19,
+          "revenue": 646
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 17,
+          "revenue": 493
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 4,
+          "revenue": 460
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 5,
+          "revenue": 375
+        },
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 8,
+          "revenue": 352
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    },
+    {
+      "date": "2026-05-12",
+      "orderCount": 78,
+      "totalRevenue": 5774,
+      "totalUnits": 72,
+      "topProducts": [
+        {
+          "sku": "WMT-008",
+          "name": "Cable Management Kit",
+          "units": 18,
+          "revenue": 1638
+        },
+        {
+          "sku": "WMT-005",
+          "name": "Mechanical Keyboard",
+          "units": 10,
+          "revenue": 1180
+        },
+        {
+          "sku": "WMT-002",
+          "name": "USB-C Hub 7-in-1",
+          "units": 16,
+          "revenue": 1040
+        },
+        {
+          "sku": "WMT-007",
+          "name": "Mouse Pad XL",
+          "units": 9,
+          "revenue": 873
+        },
+        {
+          "sku": "WMT-003",
+          "name": "Portable Phone Stand",
+          "units": 6,
+          "revenue": 522
+        },
+        {
+          "sku": "WMT-006",
+          "name": "Webcam 1080p",
+          "units": 4,
+          "revenue": 276
+        },
+        {
+          "sku": "WMT-001",
+          "name": "Wireless Earbuds Pro",
+          "units": 7,
+          "revenue": 189
+        },
+        {
+          "sku": "WMT-004",
+          "name": "LED Desk Lamp",
+          "units": 2,
+          "revenue": 56
+        }
+      ],
+      "fetchedAt": "2026-05-12T23:08:29.244Z"
+    }
+  ]
+}
