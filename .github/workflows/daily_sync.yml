@@ -1,0 +1,40 @@
+name: Daily Walmart Sync
+
+on:
+  schedule:
+    - cron: '0 8 * * *'   # 每天 UTC 08:00（台灣時間下午 4:00）
+  workflow_dispatch:        # 允許在 GitHub 網頁手動觸發
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily sync
+        run: python run_daily.py
+        env:
+          WALMART_CLIENT_ID:     ${{ secrets.WALMART_CLIENT_ID }}
+          WALMART_CLIENT_SECRET: ${{ secrets.WALMART_CLIENT_SECRET }}
+          GOOGLE_CREDENTIALS:    ${{ secrets.GOOGLE_CREDENTIALS }}
+          GOOGLE_SHEET_ID:       ${{ secrets.GOOGLE_SHEET_ID }}
+
+      - name: Notify on failure
+        if: failure()
+        run: echo "::error::同步失敗，請檢查 Actions log"
