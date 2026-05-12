@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T23:08:29.244Z",
+  "lastUpdated": "2026-05-12T23:29:48.030Z",
   "daily": [
     {
       "date": "2026-02-12",
@@ -5019,60 +5019,11 @@
     },
     {
       "date": "2026-05-11",
-      "orderCount": 83,
-      "totalRevenue": 4969,
-      "totalUnits": 88,
-      "topProducts": [
-        {
-          "sku": "WMT-007",
-          "name": "Mouse Pad XL",
-          "units": 16,
-          "revenue": 1216
-        },
-        {
-          "sku": "WMT-005",
-          "name": "Mechanical Keyboard",
-          "units": 9,
-          "revenue": 747
-        },
-        {
-          "sku": "WMT-002",
-          "name": "USB-C Hub 7-in-1",
-          "units": 10,
-          "revenue": 680
-        },
-        {
-          "sku": "WMT-004",
-          "name": "LED Desk Lamp",
-          "units": 19,
-          "revenue": 646
-        },
-        {
-          "sku": "WMT-003",
-          "name": "Portable Phone Stand",
-          "units": 17,
-          "revenue": 493
-        },
-        {
-          "sku": "WMT-001",
-          "name": "Wireless Earbuds Pro",
-          "units": 4,
-          "revenue": 460
-        },
-        {
-          "sku": "WMT-006",
-          "name": "Webcam 1080p",
-          "units": 5,
-          "revenue": 375
-        },
-        {
-          "sku": "WMT-008",
-          "name": "Cable Management Kit",
-          "units": 8,
-          "revenue": 352
-        }
-      ],
-      "fetchedAt": "2026-05-12T23:08:29.244Z"
+      "orderCount": 0,
+      "totalRevenue": 0,
+      "totalUnits": 0,
+      "topProducts": [],
+      "fetchedAt": "2026-05-12T23:29:48.022Z"
     },
     {
       "date": "2026-05-12",
