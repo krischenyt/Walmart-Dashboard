@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-17T05:43:38.499Z",
+  "lastUpdated": "2026-05-18T06:07:34.709Z",
   "daily": [
     {
       "date": "2026-02-12",
@@ -5064,6 +5064,14 @@
       "totalUnits": 0,
       "topProducts": [],
       "fetchedAt": "2026-05-17T05:43:38.491Z"
+    },
+    {
+      "date": "2026-05-17",
+      "orderCount": 0,
+      "totalRevenue": 0,
+      "totalUnits": 0,
+      "topProducts": [],
+      "fetchedAt": "2026-05-18T06:07:34.701Z"
     }
   ]
 }
