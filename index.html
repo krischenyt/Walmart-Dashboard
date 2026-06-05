@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Walmart 1P Sales Dashboard · Micro Ingredients</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#f2f4f8;--surface:#ffffff;--surface2:#f0f2f6;--border:#e2e6ed;--border2:#d0d6e0;
+  --accent:#0057ff;--accent-light:#e8eeff;--accent2:#00b894;--accent2-light:#e0f7f3;
+  --accent3:#e17055;--accent3-light:#fdf0ec;--accent4:#fdcb6e;
+  --walmart:#0071dc;--walmart-dark:#004f9a;--walmart-yellow:#ffc220;
+  --text:#1a2035;--text-muted:#7a8499;--text-dim:#b0b8c8;
+  --shadow:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.04);
+  --shadow-lg:0 8px 32px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;}
+.container{max-width:1440px;margin:0 auto;padding:24px 24px;}
+
+/* ── NAV TABS ── */
+.page-nav{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:24px;}
+.page-tab{padding:10px 22px;font-size:13px;font-weight:600;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .15s;background:none;border-top:none;border-left:none;border-right:none;font-family:'DM Sans',sans-serif;}
+.page-tab:hover{color:var(--accent);}
+.page-tab.active{color:var(--walmart);border-bottom-color:var(--walmart);}
+
+/* ── HEADER ── */
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:18px;border-bottom:1px solid var(--border);}
+.header-left{display:flex;align-items:center;gap:14px;}
+.walmart-badge{background:var(--walmart);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;letter-spacing:.5px;}
+.header-left h1{font-size:clamp(18px,2.2vw,26px);font-weight:700;letter-spacing:-.3px;}
+.header-left h1 span{color:var(--walmart);}
+.header-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);margin-top:3px;letter-spacing:.4px;display:flex;align-items:center;gap:8px;}
+.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent2);animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.header-right{display:flex;gap:8px;align-items:center;flex-shrink:0;}
+.dl-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;background:var(--walmart);color:#fff;font-size:12px;font-weight:600;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;box-shadow:0 2px 8px rgba(0,113,220,.25);transition:all .15s;text-decoration:none;}
+.dl-btn:hover{background:var(--walmart-dark);transform:translateY(-1px);}
+.dl-btn svg{flex-shrink:0;}
+
+/* ── KPI ── */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px;}
+@media(max-width:900px){.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.kpi-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 16px 14px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:box-shadow .2s,transform .2s;}
+.kpi-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-1px);}
+.kpi-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0;}
+.kpi-card.blue::after{background:var(--walmart);}
+.kpi-card.green::after{background:var(--accent2);}
+.kpi-card.orange::after{background:var(--accent3);}
+.kpi-card.yellow::after{background:var(--accent4);}
+.kpi-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:10px;}
+.kpi-card.blue .kpi-icon{background:#e6f0ff;}
+.kpi-card.green .kpi-icon{background:var(--accent2-light);}
+.kpi-card.orange .kpi-icon{background:var(--accent3-light);}
+.kpi-card.yellow .kpi-icon{background:#fef9e7;}
+.kpi-label{font-size:10px;color:var(--text-muted);font-weight:600;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px;}
+.kpi-value{font-size:clamp(20px,2vw,28px);font-weight:700;line-height:1;margin-bottom:5px;}
+.kpi-card.blue .kpi-value{color:var(--walmart);}
+.kpi-card.green .kpi-value{color:var(--accent2);}
+.kpi-card.orange .kpi-value{color:var(--accent3);}
+.kpi-card.yellow .kpi-value{color:#c9930a;}
+.kpi-sub{font-size:11px;color:var(--text-muted);}
+.kpi-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600;margin-top:7px;}
+.kpi-badge.up{background:var(--accent2-light);color:var(--accent2);}
+.kpi-badge.neutral{background:#e6f0ff;color:var(--walmart);}
+
+/* ── CARDS ── */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;box-shadow:var(--shadow);}
+.card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.card-title{font-size:13px;font-weight:600;color:var(--text);}
+.card-tag{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-dim);background:var(--surface2);padding:2px 8px;border-radius:6px;}
+
+/* ── GRID LAYOUTS ── */
+.charts-main{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.chart-row{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-bottom:14px;}
+@media(max-width:900px){.charts-main,.chart-row{grid-template-columns:1fr}}
+
+/* ── SORT PILLS ── */
+.filter-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;align-items:center;}
+.filter-label{font-size:11px;color:var(--text-muted);font-weight:500;}
+.pill{padding:5px 14px;border-radius:20px;border:1px solid var(--border2);background:var(--surface2);color:var(--text-muted);font-size:11px;font-weight:500;cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
+.pill:hover{border-color:var(--walmart);color:var(--walmart);background:#e6f0ff;}
+.pill.active{background:var(--walmart);color:#fff;border-color:var(--walmart);}
+
+/* ── TABLE ── */
+.table-wrap{overflow-x:auto;}
+table{width:100%;border-collapse:collapse;}
+thead tr{border-bottom:2px solid var(--border);}
+thead th{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--text-muted);padding:0 8px 10px;text-align:left;}
+thead th:not(:first-child):not(:nth-child(2)){text-align:right;}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s;}
+tbody tr:hover{background:#f7f9fc;}
+tbody tr:last-child{border-bottom:none;}
+td{padding:10px 8px;font-size:13px;vertical-align:middle;}
+td:not(:first-child):not(:nth-child(2)){text-align:right;}
+.rank{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-dim);}
+.prod-name{font-size:12px;color:var(--text);max-width:260px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;font-weight:500;}
+.sku-chip{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;background:#e6f0ff;color:var(--walmart);padding:2px 7px;border-radius:5px;cursor:pointer;font-weight:500;border:1px solid transparent;transition:all .15s;margin-top:2px;user-select:none;}
+.sku-chip:hover{background:var(--walmart);color:#fff;}
+.sku-chip::after{content:' ↗';font-size:9px;}
+.gmv-val{font-family:'DM Mono',monospace;font-size:12px;color:var(--walmart);font-weight:500;}
+.units-val{font-family:'DM Mono',monospace;font-size:12px;color:var(--accent2);}
+.cell-num{font-family:'DM Mono',monospace;font-size:11px;}
+.bar-mini{display:block;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--walmart),#8bbfff);margin-top:4px;}
+
+/* ── RANK LIST ── */
+.rank-list{display:flex;flex-direction:column;gap:7px;}
+.rank-item{display:flex;align-items:center;gap:12px;padding:9px 11px;border-radius:10px;background:var(--surface2);transition:background .15s;cursor:pointer;}
+.rank-item:hover{background:#edf0f7;}
+.rank-num{font-family:'DM Mono',monospace;font-size:12px;color:var(--text-dim);width:20px;text-align:center;flex-shrink:0;}
+.rank-num.top3{color:var(--walmart);font-weight:700;}
+.rank-info{flex:1;min-width:0;}
+.rank-name{font-size:12px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-sku-small{font-family:'DM Mono',monospace;font-size:10px;color:var(--text-muted);margin-top:2px;}
+.rank-bar-wrap{flex:0 0 110px;}
+.rank-bar-bg{background:var(--border);border-radius:3px;height:5px;overflow:hidden;margin-bottom:3px;}
+.rank-bar-fill{height:100%;border-radius:3px;}
+.rank-gmv{font-family:'DM Mono',monospace;font-size:11px;color:var(--walmart);font-weight:500;text-align:right;}
+
+/* ══════════════════════════
+   WEEKLY SECTION
+══════════════════════════ */
+.week-ref{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:20px;font-size:11px;color:#555;display:flex;flex-wrap:wrap;gap:12px;align-items:center;}
+.week-ref span{white-space:nowrap;font-family:'DM Mono',monospace;}
+.week-ref b{color:#333;}
+.week-warn{background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:5px 10px;font-size:11px;color:#b45309;margin-top:8px;}
+
+.product-tabs{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;}
+.product-tab{padding:6px 14px;font-size:12px;border:1px solid var(--border2);border-radius:20px;cursor:pointer;background:var(--surface);color:var(--text-muted);transition:all .15s;font-family:'DM Sans',sans-serif;font-weight:500;}
+.product-tab.active{background:var(--walmart);color:#fff;border-color:var(--walmart);}
+.product-tab:hover:not(.active){background:var(--surface2);border-color:var(--walmart);color:var(--walmart);}
+
+.weekly-kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
+@media(max-width:900px){.weekly-kpi-grid{grid-template-columns:repeat(2,1fr)}}
+.wkpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 15px;box-shadow:var(--shadow);}
+.wkpi-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;font-weight:600;}
+.wkpi-value{font-size:21px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.wkpi-sub{font-size:11px;color:var(--text-muted);}
+.badge-up{display:inline-block;background:var(--accent2-light);color:var(--accent2);padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600;}
+.badge-down{display:inline-block;background:var(--accent3-light);color:var(--accent3);padding:2px 8px;border-radius:12px;font-size:12px;font-weight:600;}
+
+.charts-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.charts-grid-2-wide{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+@media(max-width:900px){.charts-grid-2,.charts-grid-2-wide{grid-template-columns:1fr}}
+.chart-container{position:relative;width:100%;}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(15,20,35,.45);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--surface);border-radius:16px;width:100%;max-width:700px;box-shadow:var(--shadow-lg);overflow:hidden;animation:slideUp .25s ease;}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.modal-header{padding:20px 22px 14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;}
+.modal-title{font-size:14px;font-weight:700;color:var(--text);max-width:560px;line-height:1.4;}
+.modal-sku{font-family:'DM Mono',monospace;font-size:11px;color:var(--text-muted);margin-top:3px;}
+.modal-close{width:28px;height:28px;border-radius:8px;border:1px solid var(--border);background:var(--surface2);cursor:pointer;font-size:15px;color:var(--text-muted);display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;margin-left:12px;}
+.modal-close:hover{background:var(--border);}
+.modal-body{padding:18px 22px 22px;}
+.modal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;}
+.modal-stat{background:var(--surface2);border-radius:10px;padding:12px;text-align:center;}
+.modal-stat-label{font-size:10px;color:var(--text-muted);font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px;}
+.modal-stat-val{font-size:17px;font-weight:700;}
+.modal-stat-val.blue{color:var(--walmart);}
+.modal-stat-val.green{color:var(--accent2);}
+.modal-stat-val.orange{color:var(--accent3);}
+.modal-chart-wrap{position:relative;height:200px;}
+.modal-table{margin-top:18px;}
+.modal-table table{width:100%;}
+.modal-table thead th{font-size:10px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--text-muted);padding:0 8px 8px;text-align:right;border-bottom:1px solid var(--border);}
+.modal-table thead th:first-child{text-align:left;}
+.modal-table tbody td{font-family:'DM Mono',monospace;font-size:12px;padding:8px;text-align:right;border-bottom:1px solid var(--border);color:var(--text);}
+.modal-table tbody td:first-child{text-align:left;font-family:'DM Sans',sans-serif;font-weight:600;color:var(--text-muted);font-size:11px;}
+.modal-table tbody tr:last-child td{border-bottom:none;}
+.modal-table tbody td.pos{color:var(--accent2);}
+.modal-table tbody td.neg{color:var(--accent3);}
+.modal-table tbody td.zero{color:var(--text-dim);}
+
+/* ── PAGE SECTIONS ── */
+.page-section{display:none;}
+.page-section.active{display:block;}
+
+footer{text-align:center;padding:18px 0 4px;font-family:'DM Mono',monospace;font-size:10px;color:var(--text-dim);border-top:1px solid var(--border);margin-top:20px;}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="header-left">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:3px;">
+        <h1>Micro Ingredients <span>Sales Dashboard</span></h1>
+      </div>
+      <div class="header-meta"><span class="live-dot"></span>Vendor: Bayland Pro Solutions LLC &nbsp;·&nbsp; Oct 2025 – May 2026 &nbsp;·&nbsp; 97 SKUs</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <button class="dl-btn" onclick="downloadCSV()" style="background:#00b894;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      3P Export CSV
+    </button>
+    <button class="dl-btn" onclick="downloadWeeklyCSV()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      1P Export CSV
+    </button>
+  </div>
+</header>
+
+<!-- PAGE NAVIGATION -->
+<div class="page-nav">
+  <button class="page-tab active" onclick="showPage('monthly',this)">📊 Monthly Overview <span style="font-size:10px;background:#e0f7f3;color:#00b894;padding:2px 7px;border-radius:10px;font-weight:600;margin-left:4px;">3P</span></button>
+  <button class="page-tab" onclick="showPage('weekly',this)">📅 Weekly Detail — May 2026 <span style="font-size:10px;background:#e6f0ff;color:#0071dc;padding:2px 7px;border-radius:10px;font-weight:600;margin-left:4px;">WALMART 1P</span></button>
+</div>
+
+<!-- ════════════════════════════════════
+     PAGE 1: MONTHLY OVERVIEW
+════════════════════════════════════ -->
+<div id="page-monthly" class="page-section active">
+
+  <div class="kpi-grid">
+    <div class="kpi-card blue">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-label">Total GMV</div>
+      <div class="kpi-value" id="kpiGmv">—</div>
+      <div class="kpi-sub">Oct 2025 – May 2026</div>
+      <div class="kpi-badge up" id="kpiGmvBadge"></div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-icon">📦</div>
+      <div class="kpi-label">Total Units Sold</div>
+      <div class="kpi-value" id="kpiUnits">—</div>
+      <div class="kpi-sub">All active SKUs</div>
+      <div class="kpi-badge up" id="kpiUnitsBadge"></div>
+    </div>
+    <div class="kpi-card orange">
+      <div class="kpi-icon">🏆</div>
+      <div class="kpi-label">Best Month GMV</div>
+      <div class="kpi-value" id="kpiBest">—</div>
+      <div class="kpi-sub" id="kpiBestSub"></div>
+      <div class="kpi-badge up" id="kpiBestBadge"></div>
+    </div>
+    <div class="kpi-card yellow">
+      <div class="kpi-icon">💲</div>
+      <div class="kpi-label">Avg GMV / Unit</div>
+      <div class="kpi-value" id="kpiAvg">—</div>
+      <div class="kpi-sub">Blended average</div>
+      <div class="kpi-badge neutral" id="kpiSkus"></div>
+    </div>
+  </div>
+
+  <div class="charts-main">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Monthly GMV Trend</span><span class="card-tag">USD</span></div>
+      <canvas id="gmvChart" height="175"></canvas>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">Monthly Units Sold</span><span class="card-tag">QTY · SOLD UNITS</span></div>
+      <canvas id="unitsChart" height="175"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-row">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Top 10 Products by GMV</span><span class="card-tag">RANKED · CLICK TO EXPLORE</span></div>
+      <div id="top10List"></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">GMV Share — Top 6</span><span class="card-tag">%</span></div>
+      <canvas id="pieChart" height="240"></canvas>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><span class="card-title">All Products Performance</span><span class="card-tag">CLICK SKU FOR TREND</span></div>
+    <div class="filter-row">
+      <span class="filter-label">Sort by:</span>
+      <button class="pill active" onclick="sortTable('gmv',this)">GMV ↓</button>
+      <button class="pill" onclick="sortTable('units',this)">Units ↓</button>
+      <button class="pill" onclick="sortTable('avg',this)">Avg Price ↓</button>
+    </div>
+    <div class="table-wrap">
+      <table id="prodTable">
+        <thead>
+          <tr>
+            <th style="width:32px" rowspan="2">#</th>
+            <th rowspan="2">Product / SKU</th>
+            <th colspan="8" style="text-align:center;background:#e6f0ff;color:#0071dc;border-radius:4px;">Monthly GMV (USD)</th>
+            <th rowspan="2" style="background:#e0f7f3;color:#00b894;">Total GMV</th>
+            <th rowspan="2" style="background:#e0f7f3;color:#00b894;">Total Units</th>
+          </tr>
+          <tr>
+            <th>Oct-25</th><th>Nov-25</th><th>Dec-25</th>
+            <th>Jan-26</th><th>Feb-26</th><th>Mar-26</th>
+            <th>Apr-26</th><th>May-26</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /page-monthly -->
+
+
+<!-- ════════════════════════════════════
+     PAGE 2: WEEKLY DETAIL
+════════════════════════════════════ -->
+<div id="page-weekly" class="page-section">
+
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+    <span class="walmart-badge">WALMART 1P</span>
+    <span style="font-size:13px;color:var(--text-muted);font-weight:500;">May 2026 Weekly POS Report &nbsp;·&nbsp; Vendor: Bayland Pro Solutions LLC</span>
+  </div>
+  <div class="week-ref">
+    <span><b>W13</b> 2026/05/01 (single day)</span>
+    <span><b>W14</b> 2026/05/02–05/08</span>
+    <span><b>W15</b> 2026/05/09–05/15</span>
+    <span><b>W16</b> 2026/05/16–05/22</span>
+    <span><b>W17</b> 2026/05/23–05/29</span>
+    <span><b>W18 ⚠</b> 2026/05/30–05/31 (incomplete week)</span>
+  </div>
+
+  <div class="product-tabs" id="productTabs"></div>
+
+  <div class="weekly-kpi-grid" id="weeklyMetrics"></div>
+
+  <div class="charts-grid-2">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Weekly POS Sales Qty (Units)</span><span class="card-tag">W13–W18</span></div>
+      <div class="chart-container" style="height:200px"><canvas id="posChart"></canvas></div>
+      <p class="week-warn">⚠ W18 is incomplete (2 days only) — lower numbers expected</p>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">$ per Store per Week (Avg)</span><span class="card-tag">USD</span></div>
+      <div class="chart-container" style="height:200px"><canvas id="dpsChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="charts-grid-2">
+    <div class="card">
+      <div class="card-header"><span class="card-title">Store On-Hand Inventory (Units)</span><span class="card-tag">EOW SNAPSHOT</span></div>
+      <div class="chart-container" style="height:180px"><canvas id="invChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><span class="card-title">Store On-Order Quantity (Units)</span><span class="card-tag">REPLENISHMENT</span></div>
+      <div class="chart-container" style="height:180px"><canvas id="orderChart"></canvas></div>
+    </div>
+  </div>
+
+</div><!-- /page-weekly -->
+
+<footer>Walmart 1P Sales Report · Micro Ingredients / Bayland Pro Solutions LLC · Oct 2025 – May 2026 · Built with Chart.js</footer>
+</div><!-- /container -->
+
+
+<!-- ── MODAL ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-sku" id="modalSku"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-stats">
+        <div class="modal-stat"><div class="modal-stat-label">Total GMV</div><div class="modal-stat-val blue" id="mStatGmv"></div></div>
+        <div class="modal-stat"><div class="modal-stat-label">Total Units</div><div class="modal-stat-val green" id="mStatUnits"></div></div>
+        <div class="modal-stat"><div class="modal-stat-label">Avg / Unit</div><div class="modal-stat-val orange" id="mStatAvg"></div></div>
+      </div>
+      <div class="modal-chart-wrap"><canvas id="modalChart"></canvas></div>
+      <div class="modal-table">
+        <table>
+          <thead><tr><th>Month</th><th>GMV</th><th>Units</th><th>GMV MoM Δ</th></tr></thead>
+          <tbody id="modalTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ═══════════════════════════════════════
+// PAGE NAVIGATION
+// ═══════════════════════════════════════
+function showPage(name, btn) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ═══════════════════════════════════════
+// MONTHLY DATA
+// ═══════════════════════════════════════
+const MONTHLY_DATA = {"months":["Oct-25","Nov-25","Dec-25","Jan-26","Feb-26","Mar-26","Apr-26","May-26"],"monthly_gmv":[1441.13,14084.410000000002,54260.259999999995,67265.38,144624.66,167488.99,175703.41,179590.47],"monthly_units":[45,321,1846,2480,5139,6159,6551,6826],"products":[{"id":"18098218200","name":"Micro Ingredients Oil of Oregano Softgels, 150 Count","sku":"BA-MI-OOB150-A","gmv":[0,0,21068.85,4205.73,27274.87,41201.51,41441.58,33441.09],"units":[0,0,791,169,1058,1715,1807,1530],"total_gmv":168633.63,"total_units":7070},{"id":"466519103","name":"Micro Ingredients Astaxanthin 12mg with MCT Oil, 120 So","sku":"BA-MI-AST090-A","gmv":[0,0,8436.65,2189.23,16739.01,7591.14,13226.57,11139.74],"units":[0,0,233,63,467,212,381,322],"total_gmv":59322.34,"total_units":1678},{"id":"13374261658","name":"Micro Ingredients Multi Collagen Peptides Powder, 1lb (","sku":"BA-MI-COL0453","gmv":[0,0,6600.34,12334.49,9300.69,9679.49,9987.05,9187.51],"units":[0,0,185,372,270,272,302,259],"total_gmv":57089.57,"total_units":1660},{"id":"605368683","name":"Micro Ingredients Multi Collagen Protein Powder, 2lb","sku":"BA-MI-COL0907-A","gmv":[0,10889.2,0,49.99,9408.52,10905.12,7292.7,8856.15],"units":[0,228,0,1,198,241,146,177],"total_gmv":47401.68,"total_units":991},{"id":"18225755713","name":"Micro Ingredients Vitamin D3 5000iu with K2(MK-7) 100mc","sku":"BA-MI-DKF0180","gmv":[0,0,418.1,5498.06,6554.93,7337.91,5840.26,10299.37],"units":[0,0,19,247,290,328,300,506],"total_gmv":35948.630000000005,"total_units":1690},{"id":"486500235","name":"Micro Ingredients Organic Pomegranate Juice Powder, 1lb","sku":"BA-MI-POM0453","gmv":[0,0,1676.23,5319.53,5007.72,6331.86,6677.0,5879.45],"units":[0,0,55,203,167,219,226,195],"total_gmv":30891.79,"total_units":1065},{"id":"235400999","name":"Micro Ingredients Vitamin D3 5,000iu with K2(MK-7) 100m","sku":"BA-VDK0300","gmv":[0,0,3855.63,5889.09,4686.07,8029.76,7456.58,3.13],"units":[0,0,126,220,156,290,290,0],"total_gmv":29920.26,"total_units":1082},{"id":"18144420496","name":"Micro Ingredients Organic Instant 10-in-1 Mushroom Coff","sku":"BA-MI-MIC0397","gmv":[0,0,987.54,2509.89,4786.64,4855.33,4298.5,4416.06],"units":[0,0,40,102,210,199,176,182],"total_gmv":21853.96,"total_units":909},{"id":"19152758966","name":"Micro Ingredients Odorless Garlic, 300 Softgels | 2 Yea","sku":"BA-MI-AGC300-C","gmv":[0,0,0,0,10483.24,1268.67,2197.78,5693.85],"units":[0,0,0,0,365,45,78,211],"total_gmv":19643.54,"total_units":699},{"id":"10302570291","name":"Micro Ingredients Beef Gelatin Powder, 2lb (32oz) | Pre","sku":"BA-MI-GEL0907-A","gmv":[0,0,0,0,7886.4,2708.98,1414.75,6812.18],"units":[0,0,0,0,273,92,47,260],"total_gmv":18822.31,"total_units":672},{"id":"18038159781","name":"Micro Ingredients Organic Blue Spirulina Powder (Phycoc","sku":"BA-MI-BSP0030","gmv":[0,0,313.23,2359.89,3160.47,3794.19,3479.31,3871.52],"units":[0,0,15,130,153,188,171,214],"total_gmv":16978.61,"total_units":871},{"id":"789762998","name":"Micro Ingredients Organic Inulin FOS Powder (Jerusalem","sku":"BA-MI-INU1000","gmv":[0,0,1666.23,3438.1,2864.72,3267.38,2983.13,2494.83],"units":[0,0,54,111,94,107,98,81],"total_gmv":16714.39,"total_units":545},{"id":"7778516247","name":"Micro Ingredients Organic Non-Fortified Nutritional Yea","sku":"BA-MI-YEA0907","gmv":[0,0,615.33,2307.76,2576.19,2908.43,2846.97,2580.7],"units":[0,0,21,77,96,101,95,85],"total_gmv":13835.38,"total_units":475},{"id":"298870288","name":"Micro Ingredients Organic Lemon Juice Powder, 10 Ounce","sku":"BA-MI-LEM0283","gmv":[0,0,799.68,3563.49,2879.77,2508.99,1340.27,1212.56],"units":[0,0,32,146,116,106,54,53],"total_gmv":12304.76,"total_units":507},{"id":"752991817","name":"Micro Ingredients Organic MCT Oil Powder with Prebiotic","sku":"BA-MI-MCT0454-A","gmv":[0,0,995.34,2060.39,1975.93,2085.53,1179.03,1975.6],"units":[0,0,33,68,65,68,39,67],"total_gmv":10271.82,"total_units":340},{"id":"16925369513","name":"Micro Ingredients L-Theanine 200mg with Magnesium Glyci","sku":"BA-MI-THE400","gmv":[0,0,0,0,1444.16,2552.92,3218.08,2962.92],"units":[0,0,0,0,56,108,143,117],"total_gmv":10178.08,"total_units":424},{"id":"19096266320","name":"Micro Ingredients Antarctic Krill Oil Supplement 1,000m","sku":"BA-MI-KRI300","gmv":[0,0,0,0,534.29,2658.38,3143.44,2880.88],"units":[0,0,0,0,18,92,115,106],"total_gmv":9216.99,"total_units":331},{"id":"18227355195","name":"Micro Ingredients Saffron+ Advanced, 60 Veggie Capsules","sku":"BA-MI-SAF060-A","gmv":[0,0,836.12,1304.19,1404.96,1930.83,1559.3,1674.23],"units":[0,0,35,55,60,82,67,71],"total_gmv":8709.63,"total_units":370},{"id":"497868159","name":"Organic Chlorella Spirulina Tablets, 3000mg Per Serving","sku":"BA-MI-MXT720","gmv":[0,0,828.65,1555.41,1578.37,2481.94,2277.43,-36.94],"units":[0,0,26,51,52,88,74,-1],"total_gmv":8684.86,"total_units":290},{"id":"244184453","name":"Pure Acerola Cherry Powder Organic, Natural Organic Vit","sku":"BA-ACE-0227","gmv":[0,0,792.68,709.82,2110.29,2328.93,1728.12,0.0],"units":[0,0,26,23,72,78,57,0],"total_gmv":7669.84,"total_units":256},{"id":"19131051848","name":"Micro Ingredients Turmeric Curcumin Supplement with Bla","sku":"BA-MI-TUR300-A","gmv":[0,0,0,0,1026.59,1939.2,2186.63,2246.54],"units":[0,0,0,0,37,72,80,81],"total_gmv":7398.96,"total_units":270},{"id":"549643545","name":"Micro Ingredients Premium Organic Beet Juice Powder, 1l","sku":"BA-MI-BET0454-A","gmv":[0,0,276.54,738.76,1528.51,1477.55,1618.32,1359.74],"units":[0,0,9,24,52,47,51,44],"total_gmv":6999.42,"total_units":227},{"id":"7763859902","name":"Micro Ingredients Vitamin D3 10000iu Plus K2 (MK-7) 200","sku":"BA-MI-D3K0180","gmv":[1203.64,2239.32,0,0,0,0,0,3324.23],"units":[34,63,0,0,0,0,0,95],"total_gmv":6767.1900000000005,"total_units":192},{"id":"3077275529","name":"Micro Ingredients Goat Milk Powder, 2lb (32oz) | Grass","sku":"BA-MI-GO0907","gmv":[0,0,0,0,665.1,1145.45,2771.25,2165.05],"units":[0,0,0,0,18,31,75,59],"total_gmv":6746.85,"total_units":183},{"id":"799964028","name":"Micro Ingredients Organic Coconut Milk Powder, 2 Pound","sku":"BA-MI-COC0907","gmv":[0,0,0,0,782.73,1833.36,1707.51,2243.26],"units":[0,0,0,0,42,63,59,80],"total_gmv":6566.860000000001,"total_units":244},{"id":"18175869379","name":"Micro Ingredients Ground Cayenne Pepper Powder, 6lbs (6","sku":"BA-MI-CAY1134","gmv":[0,0,179.7,859.04,426.29,1271.88,1608.32,2054.71],"units":[0,0,6,29,29,42,53,67],"total_gmv":6399.9400000000005,"total_units":226},{"id":"18209670899","name":"Micro Ingredients Omega 3 Fish Oil Supplements 3,000mg","sku":"BA-MI-FSH0240","gmv":[0,0,311.87,1578.06,1247.33,1271.47,1238.19,743.69],"units":[0,0,13,72,53,53,57,31],"total_gmv":6390.61,"total_units":279},{"id":"16529716937","name":"Micro Ingredients Organic Ceylon Cinnamon Powder, 1lb |","sku":"BA-MI-CEY0454-A","gmv":[0,0,0,0,1042.92,2311.43,1731.28,1265.26],"units":[0,0,0,0,69,119,92,68],"total_gmv":6350.889999999999,"total_units":348},{"id":"18102773851","name":"Micro Ingredients Organic Mega 10-in-1 Mushroom Complex","sku":"BA-MI-MEG0170","gmv":[0,0,375.36,1038.46,1064.8,1185.3,1394.61,1276.34],"units":[0,0,16,47,43,49,67,53],"total_gmv":6334.87,"total_units":275},{"id":"16891555275","name":"Micro Ingredients Pure Methylated B Complex, 240 Capsul","sku":"BA-MI-MBC240-A","gmv":[0,0,0,0,0,1948.88,2196.34,2132.25],"units":[0,0,0,0,0,80,80,90],"total_gmv":6277.47,"total_units":250},{"id":"10307155127","name":"Micro Ingredients  High Potassium Electrolyte Powder, 2","sku":"BA-MI-ELE0907-A","gmv":[0,0,0,0,0,1677.6,2878.72,1600.71],"units":[0,0,0,0,0,47,81,45],"total_gmv":6157.03,"total_units":173},{"id":"7787168568","name":"Micro Ingredients Pea Protein Powder, 5lb | Unflavored","sku":"BA-MI-PEA2267","gmv":[0,0,89.98,879.78,819.79,1166.66,1390.84,1759.56],"units":[0,0,2,22,21,30,35,44],"total_gmv":6106.61,"total_units":154},{"id":"816474541","name":"Micro Ingredients Organic Spirulina Powder, 1lb (16oz)","sku":"BA-MI-SPI0453","gmv":[0,0,299.33,913.98,534.12,1133.47,1672.55,1089.53],"units":[0,0,13,40,24,50,74,49],"total_gmv":5642.98,"total_units":250},{"id":"19143267066","name":"Micro Ingredients Glucosamine Chondroitin MSM & Turmeri","sku":"BA-MI-GCM300","gmv":[0,0,0,0,543.19,1441.28,2248.95,1034.55],"units":[0,0,0,0,22,62,85,40],"total_gmv":5267.969999999999,"total_units":209},{"id":"689538068","name":"Micro Ingredients Organic Stevia Sweetner, 8oz (1418 Se","sku":"BA-MI-STA0227","gmv":[0,0,299.5,1097.17,539.1,1184.03,1074.21,785.69],"units":[0,0,10,42,23,52,35,26],"total_gmv":4979.7,"total_units":188},{"id":"798059477","name":"Micro Ingredients Organic Strawberry Powder, 16 Ounce |","sku":"BA-MI-STW0340","gmv":[0,0,433.28,928.45,1009.23,1565.74,982.91,0],"units":[0,0,14,31,33,55,32,0],"total_gmv":4919.61,"total_units":165},{"id":"17887606422","name":"Micro Ingredients Pure Methylated Multivitamin, 240 Cap","sku":"BA-MI-MMV240","gmv":[0,0,0,0,0,330.39,1920.02,2183.21],"units":[0,0,0,0,0,12,70,94],"total_gmv":4433.62,"total_units":176},{"id":"19142717417","name":"Micro Ingredients Organic Bee Pollen Granules, 1 lb | F","sku":"BA-MI-OBP0454-A","gmv":[0,0,0,0,306.89,1481.78,1743.09,845.59],"units":[0,0,0,0,10,54,58,28],"total_gmv":4377.35,"total_units":150},{"id":"555284711","name":"Sustainably Canada Grown, Organic Blueberry Extract 50:","sku":"BA-MI-BLU0170","gmv":[0,0,89.97,516.3,964.68,1915.54,838.6,0],"units":[0,0,3,17,32,66,28,0],"total_gmv":4325.09,"total_units":146},{"id":"2786657233","name":"Micro Ingredients Organic Goji Berries, 32 Ounce | Larg","sku":"BA-MI-GJB0907","gmv":[0,0,0,0,1039.25,702.5,900.71,1470.82],"units":[0,0,0,0,47,20,28,53],"total_gmv":4113.28,"total_units":148},{"id":"18165623503","name":"Micro Ingredients Organic Matcha Green Tea Powder, 1 lb","sku":"BA-MI-MAT0453","gmv":[0,0,0,0,781.7,918.45,1108.61,1295.5],"units":[0,0,0,0,41,33,38,44],"total_gmv":4104.26,"total_units":156},{"id":"19160215185","name":"Organic Slippery Elm Bark Powder, 1lb ((648 Servings) |","sku":"BA-MI-SLP0454","gmv":[0,0,0,0,740.81,1081.72,1013.74,1208.69],"units":[0,0,0,0,19,28,26,31],"total_gmv":4044.96,"total_units":104},{"id":"19144611696","name":"Micro Ingredients Triple Strength Omega 3 Fish Oil 4200","sku":"BA-MI-OME0120","gmv":[0,0,0,0,406.83,995.58,1264.66,1199.45],"units":[0,0,0,0,16,39,52,55],"total_gmv":3866.52,"total_units":162},{"id":"18222606028","name":"Micro Ingredients Marine Collagen Peptides Powder, 1 lb","sku":"BA-MI-MRE0454","gmv":[0,0,253.9,589.8,779.74,980.65,696.76,560.79],"units":[0,0,8,20,26,32,23,18],"total_gmv":3861.64,"total_units":127},{"id":"10317310477","name":"Micro Ingredients Vitamin D3 50,000 IU Plus K2 (MK-7) 2","sku":"BA-MI-VID240","gmv":[0,0,439.45,591.26,994.03,694.95,289.92,670.16],"units":[0,0,11,17,25,19,8,18],"total_gmv":3679.77,"total_units":98},{"id":"18172004268","name":"Micro Ingredients Goat Milk Powder, 1lb (16oz) | Grass","sku":"BA-MI-GMP0227","gmv":[0,0,0,0,0,0,721.26,2776.11],"units":[0,0,0,0,0,0,33,136],"total_gmv":3497.37,"total_units":169},{"id":"16884610335","name":"Micro Ingredients Pure Magnesium Glycinate 400mg Per Se","sku":"BA-MI-MAG240-A","gmv":[0,0,0,0,0,781.54,1115.32,1431.04],"units":[0,0,0,0,0,46,64,89],"total_gmv":3327.8999999999996,"total_units":199},{"id":"16884610337","name":"Micro Ingredients Multi Collagen Pills for Women & Men, 240 Capsules | Type I, II, III, V, X | Hydrolyzed Peptides with Biotin, Hyaluronic Acid, & Fat Soluble Vitamin C Complex","sku":"BA-MI-MCC0300","gmv":[0,0,0,0,0,0,0,3302.43],"units":[0,0,0,0,0,0,0,129],"total_gmv":3302.43,"total_units":129},{"id":"279568411","name":"Micro Ingredients Organic Lions Mane Mushroom Powder, 1","sku":"LIO-0227-A","gmv":[0,569.44,414.89,634.91,155.8,235.77,467.4,623.2],"units":[0,16,11,18,4,7,12,16],"total_gmv":3101.41,"total_units":84},{"id":"19173306256","name":"Micro Ingredients Organic Ceylon Cinnamon Powder, 2lb |","sku":"BA-MI-CEY0970","gmv":[0,0,0,0,533.78,479.8,695.72,1296.49],"units":[0,0,0,0,34,17,25,47],"total_gmv":3005.79,"total_units":123},{"id":"216300328","name":"Micro Ingredients Multi Collagen Protein Powder, 2lb","sku":"ARK-0110-A","gmv":[0,0,0,0,0,49.95,1468.53,1261.23],"units":[0,0,0,0,0,1,35,25],"total_gmv":2779.71,"total_units":61},{"id":"992916130","name":"Micro Ingredients Biotin 10000 mcg w/Hyaluronic Acid 25","sku":"BA-MI-BIO0360","gmv":[0,0,186.69,299.5,419.3,587.02,658.9,587.02],"units":[0,0,6,10,14,22,25,21],"total_gmv":2738.43,"total_units":98},{"id":"19110823370","name":"Micro Ingredients NAC Supplement 600mg with NAD+ & Coconut Oil, 300 Softgels | 2-in-1 N Acetyl L Cysteine Plus Nicotinamide Forms","sku":"BA-MI-NNC300","gmv":[0,0,0,0,0,0,0,2509.83],"units":[0,0,0,0,0,0,0,94],"total_gmv":2509.83,"total_units":94},{"id":"17827624842","name":"Micro Ingredients Pure Magnesium Glycinate 1,000mg, 300","sku":"BA-MI-MVC300-B","gmv":[0,0,0,0,0,499.54,619.67,1186.44],"units":[0,0,0,0,0,25,27,53],"total_gmv":2305.65,"total_units":105},{"id":"17875754585","name":"Micro Ingredients TUDCA 2,000mg Bile Salts Supplement,","sku":"BA-MI-TUD240","gmv":[0,0,0,0,0,527.76,990.52,719.64],"units":[0,0,0,0,0,20,38,26],"total_gmv":2237.92,"total_units":84},{"id":"18202111844","name":"Micro Ingredients Organic Fortified Nutritional Yeast F","sku":"BA-MI-NYF0907","gmv":[0,0,0,0,348.47,650.51,635.94,449.25],"units":[0,0,0,0,27,21,21,15],"total_gmv":2084.17,"total_units":84},{"id":"583274831","name":"Organic Lions Mane Mushroom Powder, 8 Ounce","sku":"BA-MI-LOM0227","gmv":[0,0,126.74,303.97,311.35,693.77,523.92,0],"units":[0,0,5,14,13,28,21,0],"total_gmv":1959.75,"total_units":81},{"id":"18220318196","name":"Micro Ingredients Organic Dandelion Root Tea Powder, 1l","sku":"BA-MI-DAN0454","gmv":[0,0,179.7,419.3,216.64,493.18,359.4,273.76],"units":[0,0,6,14,7,16,12,9],"total_gmv":1941.98,"total_units":64},{"id":"19134308028","name":"Vitamin K2 MK-7 Supplement, 200 mcg Per Serving, 300 Co","sku":"BA-MI-VTK300-A","gmv":[0,0,0,0,388.14,438.09,627.63,329.59],"units":[0,0,0,0,16,18,26,14],"total_gmv":1783.4499999999998,"total_units":74},{"id":"18143416427","name":"Micro Ingredients Organic Dried Raspberry Leaf Tea, 2lb","sku":"BA-MI-RAP0907","gmv":[0,0,28.99,434.85,383.86,260.91,221.92,390.85],"units":[0,0,1,15,13,9,8,13],"total_gmv":1721.38,"total_units":59},{"id":"19173507603","name":"Creatine Monohydrate Powder 1 kg (2.2 Lbs),  5000mg Per","sku":"BA-MI- CRE1000","gmv":[0,0,0,0,224.92,600.77,330.87,485.82],"units":[0,0,0,0,8,22,12,18],"total_gmv":1642.3799999999999,"total_units":60},{"id":"17295406254","name":"Micro Ingredients Mega Probiotics 200 Billion CFU, 120","sku":"BA-MI-MXP120","gmv":[0,0,0,0,0,377.87,569.81,689.77],"units":[0,0,0,0,0,13,19,23],"total_gmv":1637.4499999999998,"total_units":55},{"id":"137326104","name":"Micro Ingredients Organic Chlorella Powder, 20 Ounces |","sku":"BA-MI-CHL0453","gmv":[0,336.88,253.9,36.9,299.5,262.54,232.76,200.77],"units":[0,11,8,1,10,9,8,7],"total_gmv":1623.25,"total_units":54},{"id":"19140462769","name":"Micro Ingredients CoQ10 200mg Per Serving, 240 Coconut","sku":"BA-MI-CQM240","gmv":[0,0,0,0,431.84,483.0,411.24,258.72],"units":[0,0,0,0,16,18,15,10],"total_gmv":1584.8,"total_units":59},{"id":"18206413478","name":"Micro Ingredients Organic Ginger powder, 2lbs (32oz)","sku":"BA-MI-GIN0907","gmv":[0,0,0,0,349.86,329.87,356.85,449.82],"units":[0,0,0,0,29,13,14,18],"total_gmv":1486.4,"total_units":74},{"id":"17852300280","name":"Micro Ingredients Chlorophyll Complex, 240 Vegetarian C","sku":"BA-MI-CHL240","gmv":[0,0,0,0,0,242.06,609.74,589.74],"units":[0,0,0,0,0,9,24,24],"total_gmv":1441.54,"total_units":57},{"id":"808355114","name":"Micro Ingredients Organic Spirulina Supplement, 3000MG","sku":"BA-MI-SPT0720","gmv":[0,0,0,0,0,29.99,527.53,791.28],"units":[0,0,0,0,0,1,22,34],"total_gmv":1348.8,"total_units":57},{"id":"19144061748","name":"Micro Ingredients Vitamin D3 2,000 IU + K2 MK-7 50 mcg, 300 Virgin Coconut Oil Softgels | 2-in-1 Bone, Immune & Heart Support","sku":"BA-MI-DTF0300","gmv":[0,0,0,0,0,0,0,1257.76],"units":[0,0,0,0,0,0,0,50],"total_gmv":1257.76,"total_units":50},{"id":"19116451761","name":"Micro Ingredients Organic Korean Ginseng Root 200:1 Pow","sku":"BA-MI-GIN0113","gmv":[0,0,0,0,179.7,269.55,246.59,516.14],"units":[0,0,0,0,6,9,8,17],"total_gmv":1211.98,"total_units":40},{"id":"19173865422","name":"Micro Ingredients Pure Vitamin C Powder, 2.2lbs (1kg) |","sku":"BA-MI-ASC1000","gmv":[0,0,0,0,263.89,342.85,349.84,235.81],"units":[0,0,0,0,11,14,14,10],"total_gmv":1192.3899999999999,"total_units":49},{"id":"17863853667","name":"Micro Ingredients Pure Turmeric Curcumin Supplement 1,000mg, 120 Veggie Capsules | 95% Curcuminoids with Black Pepper & Ginger","sku":"BA-MI-TUR120-B","gmv":[0,0,0,0,0,0,0,1007.56],"units":[0,0,0,0,0,0,0,35],"total_gmv":1007.56,"total_units":35},{"id":"17245919032","name":"Micro Ingredients Lithium Orotate 10mg, 240 Veggie Caps","sku":"BA-MI-LIT240","gmv":[0,0,0,0,0,263.87,191.92,417.0],"units":[0,0,0,0,0,13,8,18],"total_gmv":872.79,"total_units":39},{"id":"16540722617","name":"Micro Ingredients Pumpkin Seed Oil with Saw Palmetto,300 Softgels | Cold Pressed Essential Fatty Acids, & Phytosterols","sku":"BA-MI-PUM240-C","gmv":[0,0,0,0,0,0,0,768.9],"units":[0,0,0,0,0,0,0,22],"total_gmv":768.9,"total_units":22},{"id":"17828122897","name":"Micro Ingredients Myo-Inositol & D-Chiro Inositol 2,050","sku":"BA-MI-INO240","gmv":[0,0,0,0,0,124.75,274.45,354.29],"units":[0,0,0,0,0,5,11,15],"total_gmv":753.49,"total_units":31},{"id":"19116422816","name":"Organic Blue Spirulina Powder (Phycocyanin Extract), 60","sku":"BA-MI-BSP0050-A","gmv":[0,0,0,0,64.97,202.93,331.84,144.95],"units":[0,0,0,0,2,7,10,5],"total_gmv":744.6899999999999,"total_units":24},{"id":"17219316886","name":"Micro Ingredients Magnesium Glycinate 350mg Per Serving","sku":"BA-MI-MGE240","gmv":[0,0,0,0,0,0,226.88,489.44],"units":[0,0,0,0,0,0,11,25],"total_gmv":716.3199999999999,"total_units":36},{"id":"1026453353","name":"Deal Supplment Turkesterone Supplement 500mg with Black","sku":"DS-TKS500","gmv":[237.49,27.98,129.87,61.93,79.92,56.93,73.97,0.0],"units":[11,2,13,7,8,5,7,0],"total_gmv":668.09,"total_units":53},{"id":"16328906060","name":"Micro Ingredients Lutein & Zeaxanthin 40mg, 240 Softgel","sku":"BA-MI-LUT200","gmv":[0,0,0,0,0,0,413.1,252.45],"units":[0,0,0,0,0,0,18,11],"total_gmv":665.55,"total_units":29},{"id":"17852100869","name":"Micro Ingredients Pure Triple Magnesium Complex, 300 Capsules | 100% Chelated Magnesium Glycinate, Malate, Taurate with Vitamin C | Filler Free, Non-GMO","sku":"BA-MI-TMC300","gmv":[0,0,0,0,0,0,0,656.14],"units":[0,0,0,0,0,0,0,29],"total_gmv":656.14,"total_units":29},{"id":"17780160662","name":"Micro Ingredients Organic Hibiscus Tea Bags, 200 Count | Caffeine Free Herbal Tea, Non-GMO, No Sugar","sku":"BA-MI-HTB200","gmv":[0,0,0,0,0,0,0,594.75],"units":[0,0,0,0,0,0,0,21],"total_gmv":594.75,"total_units":21},{"id":"14825553911","name":"Micro Ingredients Allulose Sweetener, 3lbs (48oz) | Zer","sku":"BA-MI-ALL1361","gmv":[0,0,0,0,0,0,269.5,215.6],"units":[0,0,0,0,0,0,10,8],"total_gmv":485.1,"total_units":18},{"id":"19144061212","name":"Micro Ingredients Vitamin B1 Benfotiamine 600mg Per Ser","sku":"BA-MI-BFT240","gmv":[0,0,0,0,0,0,126.79,299.5],"units":[0,0,0,0,0,0,4,10],"total_gmv":426.29,"total_units":14},{"id":"17249051803","name":"Micro Ingredients Liposomal Vitamin C 2,500mg, 240 Vege","sku":"BA-MI-LVC240","gmv":[0,0,0,0,0,0,23.99,395.83],"units":[0,0,0,0,0,0,1,17],"total_gmv":419.82,"total_units":18},{"id":"19167914334","name":"Magnesium Citrate Powder, 2 lb (32oz) |  Relaxation and","sku":"BA-MI-MCP0907","gmv":[0,0,0,0,0,0,64.89,354.39],"units":[0,0,0,0,0,0,2,12],"total_gmv":419.28,"total_units":14},{"id":"17804466546","name":"Micro Ingredients Pure Saffron Extract, 240 Veggie Caps","sku":"BA-MI-SAF240","gmv":[0,0,0,0,0,43.18,95.96,246.89],"units":[0,0,0,0,0,2,4,10],"total_gmv":386.03,"total_units":16},{"id":"16818874684","name":"Micro Ingredients Hair Growth Vitamins for Women & Men,","sku":"BA-MI-HVC240-A","gmv":[0,0,0,0,0,0,81.96,266.88],"units":[0,0,0,0,0,0,3,11],"total_gmv":348.84,"total_units":14},{"id":"16394315392","name":"Magnesium Glycinate 500mg Per Serving, 240 Capsules | 1","sku":"BA-MI-MAY200-A","gmv":[0,0,0,0,0,0,119.8,227.62],"units":[0,0,0,0,0,0,4,8],"total_gmv":347.42,"total_units":12},{"id":"678078624","name":"Micro Ingredients Organic Wheat Grass Powder (100% Whol","sku":"WHE-0500","gmv":[0,21.59,0,47.9,71.85,78.84,126.74,-23.95],"units":[0,1,0,2,3,3,5,-1],"total_gmv":322.96999999999997,"total_units":13},{"id":"20048760542","name":"Micro Ingredients Vitamin D3 1,000 IU + K2 MK-7 25 mcg, 240 Mini Softgels | Made with Coconut Oil | 2-in-1 Vitamins D & K Complex | Easy to Swallow, Non-GMO","sku":"BA-MI-DCO240","gmv":[0,0,0,0,0,0,0,288.83],"units":[0,0,0,0,0,0,0,17],"total_gmv":288.83,"total_units":17},{"id":"20132205672","name":"Micro Ingredients Vitamin D3 5,000IU with K2(MK-7) 100m","sku":"BA-VDK0300","gmv":[0,0,0,0,0,0,239.92,-59.98],"units":[0,0,0,0,0,0,8,-2],"total_gmv":179.94,"total_units":6},{"id":"865177898","name":"Micro Ingredients Organic Spirulina Chlorella Tablets 3","sku":"BA-MI-MXT720","gmv":[0,0,0,0,0,0,129.95,0],"units":[0,0,0,0,0,0,5,0],"total_gmv":129.95,"total_units":5},{"id":"17278352637","name":"Micro Ingredients Daily Probiotics 50 Billion CFU, 120 Vegetarian Capsules | 4-in-1 with Prebiotics, Postbiotics, & Digestive Enzymes | Digestive & Gut Health Support","sku":"BA-MI-PRB120","gmv":[0,0,0,0,0,0,0,106.95],"units":[0,0,0,0,0,0,0,4],"total_gmv":106.95,"total_units":4},{"id":"19183160202","name":"Micro Ingredients Sunflower Lecithin 1,600mg Per Serving, 300 Softgels | Cold Pressed, Rich in Phosphatidyl Choline | Lactation Supplement*","sku":"BA-MI-SFL0300-A","gmv":[0,0,0,0,0,0,0,59.85],"units":[0,0,0,0,0,0,0,3],"total_gmv":59.85,"total_units":3},{"id":"20325406100","name":"(2 pack) Micro Ingredients Organic Pomegranate Juice Powder, 1lb (90 Servings) | Freeze Dried from Natural Fruit, No Sugar & Additives","sku":"20325406100","gmv":[0,0,0,0,0,0,0,53.92],"units":[0,0,0,0,0,0,0,2],"total_gmv":53.92,"total_units":2},{"id":"933718520","name":"Micro Ingredients Organic Spirulina Supplement, 3000mg","sku":"NAL-0260-A","gmv":[0,0,0,0,0,0,51.9,0],"units":[0,0,0,0,0,0,2,0],"total_gmv":51.9,"total_units":2},{"id":"20059214891","name":"Micro Ingredients Organic Strawberry Powder, 16 Ounce |","sku":"BA-MI-STW0340","gmv":[0,0,0,0,0,0,29.95,0],"units":[0,0,0,0,0,0,1,0],"total_gmv":29.95,"total_units":1},{"id":"20067951973","name":"Micro Ingredients Organic Lions Mane Mushroom Powder, 8","sku":"BA-MI-LOM0227","gmv":[0,0,0,0,0,0,23.95,0],"units":[0,0,0,0,0,0,1,0],"total_gmv":23.95,"total_units":1}],"total_gmv":804458.71,"total_units":29367};
+
+const MONTHS = MONTHLY_DATA.months;
+const PALETTE = ['#0071dc','#00b894','#e17055','#fdcb6e','#a29bfe','#fd79a8'];
+const COLORS10 = ['#0071dc','#00b894','#e17055','#fdcb6e','#a29bfe','#fd79a8','#00cec9','#6c5ce7','#ff7675','#74b9ff'];
+
+Chart.defaults.color = '#7a8499';
+Chart.defaults.borderColor = '#e2e6ed';
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.font.size = 11;
+
+// KPI populate
+const totalGmv = MONTHLY_DATA.total_gmv;
+const totalUnits = MONTHLY_DATA.total_units;
+const bestIdx = MONTHLY_DATA.monthly_gmv.indexOf(Math.max(...MONTHLY_DATA.monthly_gmv));
+const avgUnit = totalUnits > 0 ? totalGmv / totalUnits : 0;
+const activeSkus = MONTHLY_DATA.products.length;
+
+document.getElementById('kpiGmv').textContent = '$' + (totalGmv/1000).toFixed(1) + 'K';
+document.getElementById('kpiGmvBadge').textContent = '↑ ' + ((MONTHLY_DATA.monthly_gmv[7]/MONTHLY_DATA.monthly_gmv[0]-1)*100).toFixed(0) + '% vs Oct-25';
+document.getElementById('kpiUnits').textContent = totalUnits.toLocaleString();
+document.getElementById('kpiUnitsBadge').textContent = '↑ ' + ((MONTHLY_DATA.monthly_units[7]/MONTHLY_DATA.monthly_units[0]-1)*100).toFixed(0) + '% vs Oct-25';
+document.getElementById('kpiBest').textContent = MONTHS[bestIdx];
+document.getElementById('kpiBestSub').textContent = '$' + MONTHLY_DATA.monthly_gmv[bestIdx].toLocaleString('en-US',{maximumFractionDigits:0}) + ' GMV';
+const mom = ((MONTHLY_DATA.monthly_gmv[bestIdx]-MONTHLY_DATA.monthly_gmv[bestIdx-1])/MONTHLY_DATA.monthly_gmv[bestIdx-1]*100);
+document.getElementById('kpiBestBadge').textContent = (mom>=0?'↑ ':'↓ ') + Math.abs(mom).toFixed(1) + '% vs prev';
+document.getElementById('kpiAvg').textContent = '$' + avgUnit.toFixed(2);
+document.getElementById('kpiSkus').textContent = activeSkus + ' active SKUs';
+
+// GMV Line
+new Chart(document.getElementById('gmvChart'), {
+  type:'line',
+  data:{labels:MONTHS, datasets:[{data:MONTHLY_DATA.monthly_gmv, borderColor:'#0071dc', backgroundColor:'rgba(0,113,220,.07)', borderWidth:2.5, pointBackgroundColor:'#0071dc', pointRadius:5, pointHoverRadius:7, fill:true, tension:.4}]},
+  options:{responsive:true, plugins:{legend:{display:false}, tooltip:{backgroundColor:'#fff', borderColor:'#e2e6ed', borderWidth:1, titleColor:'#1a2035', bodyColor:'#7a8499', callbacks:{label:ctx=>' $'+ctx.raw.toLocaleString('en-US',{maximumFractionDigits:0})}}}, scales:{x:{grid:{color:'#f0f2f5'}}, y:{grid:{color:'#f0f2f5'}, ticks:{callback:v=>'$'+(v/1000).toFixed(0)+'K'}}}}
+});
+
+// Units Bar
+new Chart(document.getElementById('unitsChart'), {
+  type:'bar',
+  data:{labels:MONTHS, datasets:[{data:MONTHLY_DATA.monthly_units, backgroundColor:MONTHS.map((_,i)=>i===7?'#00b894':'rgba(0,184,148,.35)'), borderRadius:6, borderSkipped:false}]},
+  options:{responsive:true, plugins:{legend:{display:false}, tooltip:{backgroundColor:'#fff', borderColor:'#e2e6ed', borderWidth:1, titleColor:'#1a2035', bodyColor:'#7a8499', callbacks:{label:ctx=>' '+ctx.raw.toLocaleString()+' units'}}}, scales:{x:{grid:{display:false}}, y:{grid:{color:'#f0f2f5'}}}}
+});
+
+// Top 10 ranking list
+const top10 = MONTHLY_DATA.products.slice(0,10);
+const maxTop10GMV = top10[0].total_gmv;
+const listEl = document.getElementById('top10List');
+listEl.innerHTML = '<div class="rank-list">' + top10.map((p,i) => `
+  <div class="rank-item" onclick="openModal('${p.id}')">
+    <span class="rank-num ${i<3?'top3':''}">${i+1}</span>
+    <div class="rank-info">
+      <div class="rank-name" title="${p.name}">${p.name}</div>
+      <div class="rank-sku-small">${p.sku}</div>
+    </div>
+    <div class="rank-bar-wrap">
+      <div class="rank-bar-bg"><div class="rank-bar-fill" style="width:${(p.total_gmv/maxTop10GMV*100).toFixed(1)}%;background:${COLORS10[i]}"></div></div>
+      <div class="rank-gmv">$${p.total_gmv.toLocaleString('en-US',{maximumFractionDigits:0})}</div>
+    </div>
+  </div>`).join('') + '</div>';
+
+// Pie
+const top6 = MONTHLY_DATA.products.slice(0,6);
+const othersGMV = MONTHLY_DATA.products.slice(6).reduce((s,p)=>s+p.total_gmv,0);
+new Chart(document.getElementById('pieChart'), {
+  type:'doughnut',
+  data:{labels:[...top6.map(p=>p.sku),'Others'], datasets:[{data:[...top6.map(p=>p.total_gmv),othersGMV], backgroundColor:[...PALETTE,'#dee2e8'], borderColor:'#fff', borderWidth:3, hoverOffset:8}]},
+  options:{responsive:true, cutout:'65%', plugins:{legend:{position:'bottom', labels:{font:{size:10}, padding:10, usePointStyle:true}}, tooltip:{backgroundColor:'#fff', borderColor:'#e2e6ed', borderWidth:1, titleColor:'#1a2035', bodyColor:'#7a8499', callbacks:{label:ctx=>' $'+ctx.raw.toLocaleString('en-US',{maximumFractionDigits:0})+' ('+( ctx.raw/totalGmv*100).toFixed(1)+'%)'}}}}
+});
+
+// Table
+const maxGMV = MONTHLY_DATA.products[0].total_gmv;
+function renderTable(sorted) {
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+  let rank = 0;
+  sorted.forEach(p => {
+    if(p.total_gmv === 0 && p.total_units === 0) return;
+    rank++;
+    const barW = Math.round((p.total_gmv/maxGMV)*100);
+    // GMV row
+    const tr1 = document.createElement('tr');
+    tr1.style.borderBottom = 'none';
+    tr1.innerHTML = `
+      <td rowspan="2" style="vertical-align:middle"><span class="rank">${rank}</span></td>
+      <td rowspan="2" style="vertical-align:middle">
+        <span class="prod-name" title="${p.name}">${p.name}</span>
+        <span class="sku-chip" onclick="openModal('${p.id}')">${p.sku}</span>
+        <span class="bar-mini" style="width:${barW}%"></span>
+      </td>
+      ${p.gmv.map(v=>`<td class="cell-num" style="color:${v>0?'#0071dc':v<0?'#e17055':'#b0b8c8'};font-size:10px;">${v>0?'$'+v.toLocaleString('en-US',{maximumFractionDigits:0}):v<0?'($'+Math.abs(v).toFixed(0)+')':'—'}</td>`).join('')}
+      <td rowspan="2" style="vertical-align:middle"><span class="gmv-val">$${p.total_gmv.toLocaleString('en-US',{maximumFractionDigits:0})}</span></td>
+      <td rowspan="2" style="vertical-align:middle"><span class="units-val">${p.total_units.toLocaleString()}</span></td>
+    `;
+    // Units row
+    const tr2 = document.createElement('tr');
+    tr2.innerHTML = `
+      ${p.units.map(v=>`<td class="cell-num" style="color:${v>0?'#00b894':v<0?'#e17055':'#b0b8c8'};font-size:10px;padding-top:2px;padding-bottom:8px;">${v>0?v.toLocaleString():v<0?v:'—'}</td>`).join('')}
+    `;
+    tbody.appendChild(tr1);
+    tbody.appendChild(tr2);
+  });
+}
+function sortTable(by, btn) {
+  document.querySelectorAll('#page-monthly .pill').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  const s = [...MONTHLY_DATA.products].sort((a,b) => {
+    if(by==='gmv') return b.total_gmv - a.total_gmv;
+    if(by==='units') return b.total_units - a.total_units;
+    const aA = a.total_units>0?a.total_gmv/a.total_units:0;
+    const bA = b.total_units>0?b.total_gmv/b.total_units:0;
+    return bA - aA;
+  });
+  renderTable(s);
+}
+renderTable(MONTHLY_DATA.products);
+
+// ═══════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════
+let modalChartInst = null;
+function openModal(id) {
+  const p = MONTHLY_DATA.products.find(x=>x.id===id);
+  if(!p) return;
+  document.getElementById('modalTitle').textContent = p.name;
+  document.getElementById('modalSku').textContent = 'SKU: ' + p.sku + ' · Item ID: ' + p.id;
+  document.getElementById('mStatGmv').textContent = '$'+p.total_gmv.toLocaleString('en-US',{maximumFractionDigits:0});
+  document.getElementById('mStatUnits').textContent = p.total_units.toLocaleString();
+  document.getElementById('mStatAvg').textContent = p.total_units>0?'$'+(p.total_gmv/p.total_units).toFixed(2):'—';
+  const tbody = document.getElementById('modalTableBody');
+  tbody.innerHTML = '';
+  [...MONTHS].reverse().forEach((m, ri) => {
+    const i = MONTHS.length - 1 - ri;
+    const gmv = p.gmv[i], units = p.units[i];
+    let mom2 = '—', momClass = '';
+    if(i > 0 && p.gmv[i-1] > 0) {
+      const pct = ((gmv - p.gmv[i-1]) / p.gmv[i-1] * 100);
+      mom2 = (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%';
+      momClass = pct >= 0 ? 'pos' : 'neg';
+    }
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${m}</td><td class="${gmv>0?'pos':gmv<0?'neg':'zero'}">${gmv>0?'$'+gmv.toLocaleString('en-US',{maximumFractionDigits:0}):gmv<0?'($'+Math.abs(gmv).toFixed(0)+')':'—'}</td><td class="${units>0?'pos':units<0?'neg':'zero'}">${units>0?units:units<0?units:'—'}</td><td class="${momClass}">${mom2}</td>`;
+    tbody.appendChild(tr);
+  });
+  if(modalChartInst){modalChartInst.destroy(); modalChartInst=null;}
+  modalChartInst = new Chart(document.getElementById('modalChart'), {
+    type:'bar',
+    data:{labels:MONTHS, datasets:[
+      {type:'line', label:'GMV', data:p.gmv, borderColor:'#0071dc', backgroundColor:'rgba(0,113,220,.08)', borderWidth:2.5, pointBackgroundColor:'#0071dc', pointRadius:5, pointHoverRadius:7, fill:true, tension:.4, yAxisID:'y'},
+      {type:'bar', label:'Units', data:p.units, backgroundColor:'rgba(0,184,148,.3)', borderRadius:4, borderSkipped:false, yAxisID:'y1'}
+    ]},
+    options:{responsive:true, maintainAspectRatio:false, interaction:{mode:'index', intersect:false}, plugins:{legend:{position:'bottom', labels:{font:{size:11}, padding:12, usePointStyle:true}}, tooltip:{backgroundColor:'#fff', borderColor:'#e2e6ed', borderWidth:1, titleColor:'#1a2035', bodyColor:'#7a8499', callbacks:{label:ctx=>ctx.dataset.label==='GMV'?' $'+ctx.raw.toLocaleString('en-US',{maximumFractionDigits:0}):'  '+ctx.raw+' units'}}}, scales:{x:{grid:{display:false}}, y:{grid:{color:'#f0f2f5'}, ticks:{callback:v=>'$'+(v>=1000?(v/1000).toFixed(0)+'K':v)}, position:'left'}, y1:{grid:{display:false}, ticks:{color:'#00b894'}, position:'right'}}}
+  });
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow='';}
+function closeModalOnBg(e){if(e.target===document.getElementById('modalOverlay')) closeModal();}
+document.addEventListener('keydown', e=>{if(e.key==='Escape') closeModal();});
+
+// ═══════════════════════════════════════
+// CSV DOWNLOAD
+// ═══════════════════════════════════════
+function downloadCSV() {
+  const monthGmvHeaders = MONTHS.map(m => m + ' GMV');
+  const monthUnitsHeaders = MONTHS.map(m => m + ' Units');
+  const headers = ['Item ID','Product Name','SKU', ...monthGmvHeaders, 'Total GMV', ...monthUnitsHeaders, 'Total Units'];
+  const rows = MONTHLY_DATA.products
+    .filter(p => p.total_gmv !== 0 || p.total_units !== 0)
+    .sort((a,b) => b.total_gmv - a.total_gmv)
+    .map(p => [p.id, '"'+p.name.replace(/"/g,'""')+'"', p.sku, ...p.gmv.map(v=>v.toFixed(2)), p.total_gmv.toFixed(2), ...p.units.map(v=>v), p.total_units]);
+  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'walmart_3p_monthly_sales.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ═══════════════════════════════════════
+// 1P WEEKLY CSV DOWNLOAD
+// ═══════════════════════════════════════
+function downloadWeeklyCSV() {
+  const W_LABELS_CSV = ['W13 05/01','W14 05/02-08','W15 05/09-15','W16 05/16-22','W17 05/23-29','W18 05/30-31'];
+  const headers = ['Product','Week','POS Sales (Units)','Traited Stores','$ per Store per Week','On-Hand Inventory','On-Order Quantity'];
+  const rows = [];
+  Object.entries(WEEKLY_DATA).forEach(([name, d]) => {
+    W_LABELS_CSV.forEach((wk, i) => {
+      rows.push([name, wk, d.pos[i], d.stores[i], d.dps[i].toFixed(2), d.hand[i], d.order[i]]);
+    });
+  });
+  const csv = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'walmart_1p_weekly_may2026.csv'; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// ═══════════════════════════════════════
+// WEEKLY DATA
+// ═══════════════════════════════════════
+const WEEKLY_DATA = {
+  "OIL OF OREGANO":       { pos:[375,2952,2653,3002,3088,1038], stores:[4441,4442,4443,4442,4447,4447], dps:[23.00,22.59,21.52,21.79,21.91,22.45], hand:[21803,25210,31589,36662,37271,38583], order:[31500,27980,20150,19000,17040,15280] },
+  "VITAMIN D3 K2":        { pos:[175,1438,1596,1784,1855,689],  stores:[4247,4248,4250,4249,4252,4252], dps:[18.99,18.35,18.35,18.44,18.33,19.04], hand:[36768,43855,55124,63085,63865,64579], order:[37920,31930,20880,15400,12920,12680] },
+  "COLLAGEN CAPSULES":    { pos:[93,859,1054,1194,1249,426],    stores:[3466,3467,3467,3466,3470,3470], dps:[17.84,18.37,18.12,18.30,18.16,18.33], hand:[13976,17293,20913,23762,23897,24583], order:[16756,14144,10480,9840,8000,7312] },
+  "COLLAGEN POWDER":      { pos:[76,736,793,983,974,398],       stores:[3386,3386,3388,3387,3390,3390], dps:[20.52,20.37,20.89,21.42,20.79,21.80], hand:[11107,13029,15734,18119,18606,19019], order:[12162,10129,7570,6630,5008,4504] },
+  "PUMPKIN SEED OIL":     { pos:[57,478,678,950,1148,363],      stores:[2551,2555,2560,2559,2568,2568], dps:[20.72,21.49,20.95,21.72,21.71,21.29], hand:[12903,16236,19924,23192,23711,24273], order:[15408,13824,10288,9152,7488,6832] },
+  "LIPOSOMAL NAD":        { pos:[46,359,443,446,590,199],       stores:[2385,2388,2394,2393,2401,2401], dps:[17.77,17.49,17.52,17.48,18.06,17.81], hand:[8462,10182,12621,14720,14884,15075], order:[9376,8000,5600,5056,5020,4892] },
+  "MICRO OMEGA FISH OIL": { pos:[19,157,149,211,218,70],        stores:[2373,2376,2382,2381,2390,2389], dps:[19.98,21.81,20.83,20.94,21.06,18.45], hand:[12205,15005,19043,22480,23158,23632], order:[13176,11208,6288,4662,3624,3552] }
+};
+
+const W_LABELS = ['W13\n05/01','W14\n05/02-08','W15\n05/09-15','W16\n05/16-22','W17\n05/23-29','W18\n05/30-31'];
+const W_LABELS_SHORT = ['05/01','05/02-08','05/09-15','05/16-22','05/23-29','05/30-31'];
+const W_ITEMS = Object.keys(WEEKLY_DATA);
+const W_COLORS = ['#0071dc','#00b894','#e17055','#fdcb6e','#7c3aed','#0891b2','#db2777'];
+const W_GRID = 'rgba(0,0,0,0.06)';
+const W_TEXT = '#999';
+let wCur = 'OIL OF OREGANO';
+let wCharts = {};
+
+// Build product tabs
+const tabsEl = document.getElementById('productTabs');
+W_ITEMS.forEach((item, idx) => {
+  const b = document.createElement('button');
+  b.className = 'product-tab' + (item === wCur ? ' active' : '');
+  b.textContent = item;
+  b.onclick = () => {
+    wCur = item;
+    document.querySelectorAll('.product-tab').forEach(t => t.classList.remove('active'));
+    b.classList.add('active');
+    renderWeekly();
+  };
+  tabsEl.appendChild(b);
+});
+
+function destroyWChart(id){ if(wCharts[id]){ wCharts[id].destroy(); delete wCharts[id]; } }
+
+function renderWeekly() {
+  const d = WEEKLY_DATA[wCur];
+  const cidx = W_ITEMS.indexOf(wCur);
+  const color = W_COLORS[cidx];
+  const pos = d.pos;
+  const totalPos = pos.reduce((a,b) => a+b, 0);
+  const maxFull = Math.max(...pos.slice(0,5));
+  const maxWkIdx = pos.slice(0,5).indexOf(maxFull);
+  const wow = d.pos[3] > 0 ? Math.round((d.pos[4]-d.pos[3])/d.pos[3]*100) : 0;
+
+  document.getElementById('weeklyMetrics').innerHTML = `
+    <div class="wkpi">
+      <div class="wkpi-label">6-Week Total Sales</div>
+      <div class="wkpi-value">${totalPos.toLocaleString()}</div>
+      <div class="wkpi-sub">units</div>
+    </div>
+    <div class="wkpi">
+      <div class="wkpi-label">Peak Week Sales</div>
+      <div class="wkpi-value">${maxFull.toLocaleString()}</div>
+      <div class="wkpi-sub">week of ${W_LABELS_SHORT[maxWkIdx]}</div>
+    </div>
+    <div class="wkpi">
+      <div class="wkpi-label">W17 vs W16 WoW</div>
+      <div class="wkpi-value"><span class="${wow>=0?'badge-up':'badge-down'}">${wow>=0?'↑':'↓'} ${Math.abs(wow)}%</span></div>
+      <div class="wkpi-sub">05/23-29 vs 05/16-22</div>
+    </div>
+    <div class="wkpi">
+      <div class="wkpi-label">Traited Stores (W17)</div>
+      <div class="wkpi-value">${d.stores[4].toLocaleString()}</div>
+      <div class="wkpi-sub">store locations</div>
+    </div>`;
+
+  const baseOpts = (yfmt) => ({
+    responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{ticks:{color:W_TEXT, font:{size:10}, maxRotation:0}, grid:{color:W_GRID}},
+      y:{ticks:{color:W_TEXT, callback:yfmt}, grid:{color:W_GRID}}
+    }
+  });
+
+  destroyWChart('pos');
+  wCharts.pos = new Chart(document.getElementById('posChart'), {
+    type:'bar',
+    data:{labels:W_LABELS_SHORT, datasets:[{data:pos, backgroundColor:pos.map((_,i)=>i===5?color+'88':color), borderRadius:5}]},
+    options:baseOpts(v=>v.toLocaleString())
+  });
+
+  destroyWChart('dps');
+  wCharts.dps = new Chart(document.getElementById('dpsChart'), {
+    type:'line',
+    data:{labels:W_LABELS_SHORT, datasets:[{data:d.dps, borderColor:color, backgroundColor:'transparent', tension:0.35, pointRadius:4, borderWidth:2}]},
+    options:baseOpts(v=>'$'+v.toFixed(1))
+  });
+
+  destroyWChart('inv');
+  wCharts.inv = new Chart(document.getElementById('invChart'), {
+    type:'line',
+    data:{labels:W_LABELS_SHORT, datasets:[{data:d.hand, borderColor:color, backgroundColor:color+'18', fill:true, tension:0.35, pointRadius:3, borderWidth:2}]},
+    options:baseOpts(v=>v.toLocaleString())
+  });
+
+  destroyWChart('order');
+  wCharts.order = new Chart(document.getElementById('orderChart'), {
+    type:'line',
+    data:{labels:W_LABELS_SHORT, datasets:[{data:d.order, borderColor:'#f59e0b', backgroundColor:'#fef3c720', fill:true, tension:0.35, pointRadius:3, borderWidth:2, borderDash:[5,3]}]},
+    options:baseOpts(v=>v.toLocaleString())
+  });
+}
+
+renderWeekly();
+</script>
+</body>
+</html>
